@@ -26,6 +26,7 @@ public class Box {
 		
 		System.out.println("area is " +area);
 		System.out.println("perimeter is " + perimeter);
+		System.out.println("100"+"200");
 	}
 
 }
