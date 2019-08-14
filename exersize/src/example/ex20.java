@@ -12,11 +12,11 @@ public class ex20 {
 			count = 0;
 			for(k = 2; k < i; k++) {
 				if(i % k == 0) {
-					count+=1;
+					count = count + 1;
 				}
 			}
 			if(count == 0) {
-				System.out.println(i);
+				System.out.printf("%d ",i);
 			}
 		}
 	}
