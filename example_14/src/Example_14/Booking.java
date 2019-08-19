@@ -8,15 +8,15 @@ public class Booking extends Book{
 	
 	private final int INDEX = 11; //정적 멤
 	
-	private int[] seat = new int[INDEX]; //인스턴스 멤버 
+	private int[] seat = new int[INDEX]; //인스턴스 멤버  캡슐화 시켜야한다. 변수들은 private로 생성하고 set, get 함수를 통해서 접근한다.
 	private int seatNum;
 	
 	
 	//생성자 함수 
 	public  Booking(int init) {
 		
-		seatNum = 0;
-
+		seatNum = 0;	
+		
 		for(int i = 0; i < seat.length; i++) {
 			seat[i] = init;
 			
@@ -24,7 +24,7 @@ public class Booking extends Book{
 		
 	}
 	
-	//멤버 함수  캡슐화 시켜야한다. 변수들은 private로 생성하고 set, get 함수를 통해서 접근한다.
+	//멤버 함수  
 	
 	public void initArrayValue () {
 		

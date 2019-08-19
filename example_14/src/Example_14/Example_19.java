@@ -12,12 +12,15 @@ public class Example_19 {
 		Scanner scanner = new Scanner(System.in);
 		
 		for(int i = 0; i < value.length; i++) {
-			System.out.print("input number (1 ~ 100) : ");
-			value[i] = scanner.nextInt();
+			System.out.print((i+1) + " input number (1 ~ 100) : ");
+			num = scanner.nextInt();
 			if(num < 1 || num > 100) {
 				System.out.println("wrong input number.");
 			} else {
-				value[i]++;
+				if(num % value.length == 0) {
+					value[num/value.length - 1]++;
+				}
+				value[num/value.length]++;
 			}
 		}
 		

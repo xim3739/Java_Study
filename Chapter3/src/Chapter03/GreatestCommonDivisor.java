@@ -37,6 +37,7 @@ public class GreatestCommonDivisor {
 		}
 		return num;
 	}
+	
 	public static int maxValue(int num1, int num2) {
 		
 		int max = 0;
@@ -49,6 +50,7 @@ public class GreatestCommonDivisor {
 		
 		return max;
 	}
+	
 	public static int minValue(int num1, int num2) {
 		
 		int min = 0;
@@ -61,6 +63,7 @@ public class GreatestCommonDivisor {
 		
 		return min;
 	}
+	
 	public static void GCD (int max, int min) {
 		
 		int result = 0;

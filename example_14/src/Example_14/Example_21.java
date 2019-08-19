@@ -9,6 +9,8 @@ public class Example_21 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String inputStr = null;
+		int num = 0;
+		String binaryString = null;
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("input 16x num : ");
@@ -18,17 +20,29 @@ public class Example_21 {
 		
 		for(int i = 0; i < inputStr.length(); i++) {
 			
-			if(inputStr.charAt(i) >= 48 && inputStr.charAt(i) <= 57) {
-				System.out.print(" " + hexa2bin[inputStr.charAt(i) - 48]);
-			} else if(inputStr.charAt(i) >= 97 && inputStr.charAt(i) <= 102) {
-				System.out.print(" " + hexa2bin[inputStr.charAt(i) - 87]);
-			} else if(inputStr.charAt(i) >= 65 && inputStr.charAt(i) <=70) {
-				System.out.print(" " + hexa2bin[inputStr.charAt(i) - 55]);
+			if(inputStr.charAt(i) >= '0' && inputStr.charAt(i) <= '9') {
+				System.out.print(" " + hexa2bin[inputStr.charAt(i) - '0']);
+				num = inputStr.charAt(i) - '0';
+			} else if(inputStr.charAt(i) >= 'a' && inputStr.charAt(i) <= 'z') {
+				System.out.print(" " + hexa2bin[inputStr.charAt(i) - 'a' + 10]);
+				num = inputStr.charAt(i) - 'a' + 10;
+			} else if(inputStr.charAt(i) >= 'A' && inputStr.charAt(i) <= 'Z') {
+				System.out.print(" " + hexa2bin[inputStr.charAt(i) - 'A' + 10]);
+				num = inputStr.charAt(i) - 'A' + 10;
 			}
-			
+			binaryString = toBinaryString(num);
+			System.out.print(binaryString + " ");
 		}
 		
 		
+	}
+	public static String toBinaryString(int num) {
+		String str = null;
+		str = Integer.toBinaryString(num);
+		while(str.length() < 4) {
+			str = "0" + str;
+		}
+		return str;
 	}
 
 }
