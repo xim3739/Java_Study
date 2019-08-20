@@ -10,6 +10,7 @@ public class Box {
 		this.width = 0;
 		this.length = 0;
 		this.height = 0;
+		this.boxArea = 0;
 	}
 
 	public int getWidth() {
