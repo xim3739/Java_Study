@@ -20,6 +20,7 @@ public class Consonant {
 				vowelCount++;
 			}
 		}
+		
 		System.out.println("consonant is " + consonantCount);
 		System.out.println("vowel is " + vowelCount);
 	}

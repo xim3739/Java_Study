@@ -2,16 +2,16 @@ package example17;
 
 public class Reverse {
 	private String str;
-	private String reverseStr;
+	
 	
 	public Reverse() {
 		this.str = null;
-		this.reverseStr = null;
+		
 	}
 	
 	public Reverse(String str) {
 		this.str = str;
-		this.reverseStr = null;
+		
 	}
 	
 	public String reversString() {
