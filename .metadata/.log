@@ -2866,3 +2866,23 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:165)
 	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:108)
 	... 19 more
+!SESSION 2019-08-26 22:03:12.663 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=11.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-08-26 22:03:22.264
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2019-08-27 08:34:35.626 -----------------------------------------------
+eclipse.buildId=4.10.0.I20181206-0815
+java.version=11.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-08-27 08:34:45.878
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
