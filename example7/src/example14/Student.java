@@ -8,7 +8,7 @@ public class Student {
 	private int score;
 	
 	public Student() {
-		super();
+		this(null,null,null,0,0);
 	}
 
 	public Student(String name, String studentNum, String mager, int studentYear, int score) {

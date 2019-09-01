@@ -4,7 +4,7 @@ public class JnderGraduate extends Student{
 	private String Circle;
 	
 	public JnderGraduate() {
-		super();
+		this(null, null, null, 0, 0, null);
 	}
 
 	public JnderGraduate(String name, String studentNum, String mager, int studentYear, int score, String circle) {

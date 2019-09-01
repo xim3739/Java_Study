@@ -5,7 +5,7 @@ public class Graduate extends Student{
 	private double rate;
 	
 	public Graduate() {
-		super();
+		this(null,null,null,0,0,null,0.0);
 	}
 	
 	public Graduate(String name, String studentNum, String mager, int studentYear, int score, String type, double rate) {
