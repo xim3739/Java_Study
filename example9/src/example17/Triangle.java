@@ -1,11 +1,20 @@
-package example10;
+package example17;
 
 ;
 
-public class Triangle extends Shape{
+public class Triangle extends Shape implements Movable, Drawable{
 
 	private int height;
 	private int width;
+	@Override
+	public void move(int dx, int dy) {
+		System.out.println("x : " + dx + " y : " + dy + " move");
+	}
+	
+	@Override
+	public void draw() {
+		System.out.println("Drawing");
+	}
 	
 	public Triangle() {
 		super();
