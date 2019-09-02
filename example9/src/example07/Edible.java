@@ -1,7 +1,7 @@
 package example07;
 
 public interface Edible {
-	boolean amount;
+	//boolean amount;
 	final int YTPE = 10;
-	public void eat() { };
+	//public void eat() { };
 }
