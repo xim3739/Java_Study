@@ -1,6 +1,6 @@
-package book_comparable;
+package generic.compare;
 
-public class MyClass<T> implements Comparable<T> {
+public class MyClass <T> implements Comparable<T>{
 	
 	private int num;
 	private String name;
@@ -10,22 +10,22 @@ public class MyClass<T> implements Comparable<T> {
 		this.num = num;
 		this.name = name;
 	}
-	
+
 	@Override
-	public int compareTo(T t) {
-		MyClass mc = null;
-		if(t instanceof MyClass) {
-			mc = (MyClass)t;
+	public int compareTo(T o) {
+		MyClass myClass = null;
+		if(o instanceof MyClass) {
+			myClass = (MyClass)o;
 		}
-		if(this.num > mc.num) {
+		if(this.num > myClass.num) {
 			return 1;
-		} else if(this.num < mc.num) {
+		} else if (this.num < myClass.num) {
 			return -1;
 		} else {
-			return 0;
+			return 0;	
 		}
 	}
-
+	
 	public int getNum() {
 		return num;
 	}
@@ -40,11 +40,6 @@ public class MyClass<T> implements Comparable<T> {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	@Override
-	public String toString() {
-		return "MyClass [num=" + num + ", name=" + name + "]";
 	}
 	
 	

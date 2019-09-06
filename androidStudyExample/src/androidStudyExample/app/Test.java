@@ -25,7 +25,6 @@ public class Test extends JFrame{
 		
 		//ActionListener 만들기 (무명 객체)
 		button.addActionListener(new ActionListener() {
-			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				//버튼의 text가 BUTTON 이면 버튼의 text를 Click!으로 세팅  
@@ -36,6 +35,7 @@ public class Test extends JFrame{
 					button.setText("HELLO");
 				}
 			}
+			
 		});
 		
 		
