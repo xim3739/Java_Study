@@ -6,14 +6,14 @@ import java.util.Vector;
 public class VectorTest {
 
 	public static void main(String[] args) {
-		Vector vc = new Vector();
+		Vector<Object> vc = new Vector<Object>();
 		
 		MyClass my = new MyClass(20);
-		vc.add(new String("ximximhae"));
-		vc.add(new Integer(200));
+		vc.add("ximximhae");
+		vc.add(200);
 		vc.add(my);
 		
-		Iterator iter = vc.iterator();
+		Iterator<Object> iter = vc.iterator();
 		while(iter.hasNext()) {
 			Object ob = iter.next();
 			if(ob instanceof MyClass) {
