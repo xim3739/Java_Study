@@ -14,7 +14,7 @@ public class Baker extends Thread{
 			bakery.setBread();
 			
 			try {
-				Thread.sleep((int)(Math.random()*1000+1));
+				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

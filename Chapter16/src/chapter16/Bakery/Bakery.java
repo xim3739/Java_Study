@@ -2,7 +2,7 @@ package chapter16.Bakery;
 
 public class Bakery {
 	private static int num;
-	private String[] bread = {"소보루 빵", "크림빵", "단팥빵", "슈크림빵", "식빵", "죽빵", "선빵"};
+	private String[] bread = {"소보루 빵", "크림빵", "단팥빵", "슈크림빵", "식빵", "쨉", "로우킥"};
 	private boolean isBread = false;
 	
 	public synchronized String getBread() {
@@ -39,7 +39,7 @@ public class Bakery {
 			}
 		}
 		
-		num = (int)(Math.random()*6);
+		num = (int)(Math.random()*7);
 		
 		if(num == 5 || num == 6) {
 			System.out.println(this.bread[num] + "을 날렸습니다.");

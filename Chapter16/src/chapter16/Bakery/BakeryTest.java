@@ -10,6 +10,7 @@ public class BakeryTest {
 		
 		baker.start();
 		guest.start();
+		
 	}
 
 }

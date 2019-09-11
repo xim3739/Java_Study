@@ -14,7 +14,7 @@ public class Guest extends Thread{
 			bakery.getBread();
 			
 			try {
-				Thread.sleep((int)(Math.random()*1000+1));
+				Thread.sleep(600);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
