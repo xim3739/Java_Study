@@ -71,12 +71,11 @@ public class Example08 {
 			if (con.equals("y") || con.equals("Y")) {
 				break;
 			} else if (con.equals("n") || con.equals("N")) {
+				objectInputStream.close();
 				System.exit(0);
 			}
 
 		} // end of while
-
-		objectInputStream.close();
 
 	}
 
