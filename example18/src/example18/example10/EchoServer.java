@@ -17,7 +17,7 @@ public class EchoServer {
 	public EchoServer() {
 		try {
 			serverSocket = new ServerSocket(9111);
-			System.out.println("Wiat Client");
+			System.out.println("Wait Client");
 			socket = serverSocket.accept();
 			System.out.println("Conneting Success!");
 			
