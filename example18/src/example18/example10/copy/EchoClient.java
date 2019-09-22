@@ -14,10 +14,11 @@ public class EchoClient {
 	public EchoClient() {
 		
 		try(Socket socket = new Socket("localhost", 9111);
-				BufferedWriter output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 				BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+				BufferedWriter output = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 				BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));) {
 			//인풋 아웃풋 순서도 중요하다.... 만드는거 자체도 순서가 중요하다.... 읽고 쓰고의 순서를 맞춰서 만들어야한다... 젝일...
+			
 			xim: while(true) {
 				System.out.print("send : ");
 				while((sendData = reader.readLine()) != null) {
