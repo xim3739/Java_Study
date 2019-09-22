@@ -20,7 +20,7 @@ public class EchoClient {
 		try {
 			System.out.println("Connecting....");
 			socket = new Socket("localhost", 9111);
-			output = new ObjectOutputStream(socket.getOutputStream());
+			output = new ObjectOutputStream(socket.getOutputStream()); //코멘트에 따라서 뭔가 수정
 			input = new ObjectInputStream(socket.getInputStream());
 			reader = new BufferedReader(new InputStreamReader(System.in));
 		} catch (IOException e) {
