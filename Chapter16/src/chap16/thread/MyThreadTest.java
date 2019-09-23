@@ -2,8 +2,6 @@ package chap16.thread;
 
 import java.awt.Toolkit;
 
-import jdk.nashorn.api.tree.YieldTree;
-
 public class MyThreadTest {
 
 	public static void main(String[] args) {

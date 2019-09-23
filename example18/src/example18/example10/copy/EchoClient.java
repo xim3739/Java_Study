@@ -27,7 +27,7 @@ public class EchoClient {
 				//콘솔창에 보낸다 라는 메세지 출력
 				while((sendData = reader.readLine()) != null) {
 					//컴퓨터로 입력받은 데이터가 없는지 있는지 확인 후 반복문
-					output.write(sendData+"\n");
+					output.write(sendData + "\n");
 					//컴퓨터로 입력받은 데이터에 \n을 더해서 서버에 보낸다.
 					//\n 까지 있어야 서버에서 받는다... readLine의 특성 : \n이 꼭 들어가야 한다.
 					output.flush();

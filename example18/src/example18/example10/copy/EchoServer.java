@@ -20,18 +20,18 @@ public class EchoServer {
 				BufferedWriter socketWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));) {
 			//필요한 서버소켓, 소켓, input과 output을 만든다.
 			System.out.println("Conneting Success!");
-			//연결 성공 확인 출
+			//연결 성공 확인 출력
 
 			String receivedData = null;
 			while ((receivedData = socketReader.readLine()) != null) {
 				//클라이언트가 보낸 스트림을 서버 소켓으로 읽고 그것을 저장한다.
-				//그리고 데이터가 있는지 없는지 확인 후 반복문 실
+				//그리고 데이터가 있는지 없는지 확인 후 반복문 실행
+				System.out.println("receive : " + receivedData);
 				if (receivedData.equals("quit")) {
 					break;
 				}
 				//받은 데이터가 같은 데이터이면 반복문 종
-				
-				socketWriter.write(receivedData+"\n");//리시브데이터를 널을 빼서준다. 그래서 널을 추가해야 클라이언트에서 받는다...
+				socketWriter.write(receivedData + "\n");//리시브데이터를 널을 빼서준다. 그래서 널을 추가해야 클라이언트에서 받는다...
 				//받은 데이터를 다시 보낸다. 이때 \n 필수... 
 				//받는 클라이언트가 readLine으로 받기 때문에
 				socketWriter.flush();
