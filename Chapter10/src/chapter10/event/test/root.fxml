@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="150.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.event.test.RootController">
+   <children>
+      <Button fx:id="button1" layoutX="20.0" layoutY="83.0" prefHeight="30.0" prefWidth="80.0" text="버튼1">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Button>
+      <Button fx:id="button2" layoutX="110.0" layoutY="83.0" prefHeight="30.0" prefWidth="80.0" text="버튼2">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Button>
+      <Button fx:id="button3" layoutX="200.0" layoutY="83.0" onAction="#handlerButton3Action" prefHeight="30.0" prefWidth="80.0" text="버튼3">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Button>
+      <Label fx:id="labelMessage" alignment="CENTER" layoutX="75.0" layoutY="22.0" prefHeight="40.0" prefWidth="150.0" text="안녕하세영" textFill="#18ff4e">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

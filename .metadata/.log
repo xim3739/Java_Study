@@ -10516,3 +10516,1927 @@ java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+!SESSION 2019-09-23 19:50:07.046 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-09-23 19:50:24.956
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2019-09-23 20:17:05.343 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-09-23 20:17:20.487
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2019-09-23 20:21:24.110 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-09-23 20:21:32.364
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.607
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/androidStudyExample'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.609
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/androidStudyExample'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.615
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter02'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.616
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter02'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.621
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter03'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.622
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter03'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.626
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter04'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.627
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter04'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.632
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter05'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.632
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter05'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.637
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter06'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.638
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter06'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.642
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter07'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.643
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter07'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.647
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter09'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.648
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter09'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.654
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter10'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.655
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter10'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.659
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter14'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.660
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter14'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.666
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter15'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.666
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter15'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.671
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter16'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.672
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter16'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.677
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/chapter17'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.677
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/chapter17'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.682
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter18'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.682
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter18'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.689
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example14'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.689
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example14'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.694
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example15'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.695
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example15'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.699
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example16'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.700
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example16'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.705
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example17'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.705
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example17'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.710
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example18'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.710
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example18'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.715
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example4'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.717
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example4'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.721
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example5'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.721
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example5'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.726
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example6'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.726
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example6'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.731
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example7'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.731
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example7'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.736
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example9'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.737
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example9'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.744
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/exersize'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.744
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/exersize'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.754
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/note'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.754
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/note'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.759
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/study'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.759
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/study'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.764
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/androidStudyExample'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.765
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/androidStudyExample'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.769
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter02'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:24.769
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter02'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:31.001
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter04'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:31.002
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter04'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:31.006
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter04'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:31.006
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter04'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:31.216
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter04'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:31.217
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter04'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.ui.internal.themes.CascadingFontRegistry.get(CascadingFontRegistry.java:60)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:43.582
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter10'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:43.583
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter10'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:43.710
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/Chapter10'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:43.711
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/Chapter10'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:59.820
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example14'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:59.820
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example14'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2019-09-23 20:28:59.943
+!MESSAGE Errors occurred while applying Git decorations to resources.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Errors occurred while applying Git decorations to resource 'P/example14'.
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:207)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	... 8 more
+!SUBENTRY 1 org.eclipse.egit.ui 4 0 2019-09-23 20:28:59.943
+!MESSAGE Errors occurred while applying Git decorations to resource 'P/example14'.
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4711)
+	at org.eclipse.swt.SWT.error(SWT.java:4626)
+	at org.eclipse.swt.SWT.error(SWT.java:4597)
+	at org.eclipse.jface.resource.FontRegistry.calculateDefaultFont(FontRegistry.java:517)
+	at org.eclipse.jface.resource.FontRegistry.defaultFontRecord(FontRegistry.java:568)
+	at org.eclipse.jface.resource.FontRegistry.getFontRecord(FontRegistry.java:678)
+	at org.eclipse.jface.resource.FontRegistry.get(FontRegistry.java:618)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorateFontAndColour(GitLightweightDecorator.java:439)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator$DecorationHelper.decorate(GitLightweightDecorator.java:410)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorateResource(GitLightweightDecorator.java:236)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.decorate(GitLightweightDecorator.java:201)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:247)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:105)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:360)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:346)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2019-09-23 20:29:19.141 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-09-23 20:29:28.123
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2019-09-23 20:30:04.647 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-09-23 20:30:14.022
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2019-09-24 08:12:41.857 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-09-24 08:12:53.993
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

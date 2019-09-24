@@ -8,8 +8,10 @@ import java.util.Set;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -60,23 +62,25 @@ public class InitTest extends Application {
 		
 		System.out.println(Thread.currentThread().getName() + " Thread");
 		
-		VBox rootVBox = new VBox();
-		rootVBox.setPrefSize(400, 600);
-		rootVBox.setSpacing(20);
-		rootVBox.setAlignment(Pos.CENTER);
+//		VBox rootVBox = new VBox();
+//		rootVBox.setPrefSize(400, 600);
+//		rootVBox.setSpacing(20);
+//		rootVBox.setAlignment(Pos.CENTER);
+//
+//		TextField textField = new TextField();
+//		textField.setPrefWidth(200);
+//
+//		Button button = new Button();
+//		button.setText("button");
+//		button.setOnAction((e) -> Platform.exit());
+//
+//		ObservableList<Node> list = rootVBox.getChildren();
+//		list.add(textField);
+//		list.add(button);
+		
+		Parent root = FXMLLoader.load(getClass().getResource("root.fxml"));
 
-		TextField textField = new TextField();
-		textField.setPrefWidth(200);
-
-		Button button = new Button();
-		button.setText("button");
-		button.setOnAction((e) -> Platform.exit());
-
-		ObservableList<Node> list = rootVBox.getChildren();
-		list.add(textField);
-		list.add(button);
-
-		Scene scene = new Scene(rootVBox);
+		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
 
 		primaryStage.show();
