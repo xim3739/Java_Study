@@ -31,12 +31,13 @@ public class RootController implements Initializable {
 			String text = button2.getText();
 			labelMessage.setText(text);
 		});
-
+		button3.setOnAction((e) -> handlerButton3Action(e));
 	}
 	
 	public void handlerButton3Action(ActionEvent e) {
-		String text = button3.getText();
-		labelMessage.setText(text);
+		if(labelMessage.getText().equals(button2.getText())) {
+			labelMessage.setText("안녕하세요");
+		}
 	}
 
 }
