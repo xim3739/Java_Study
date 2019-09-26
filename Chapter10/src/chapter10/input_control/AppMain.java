@@ -1,4 +1,4 @@
-package chapter10.hbox.test;
+package chapter10.input_control;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,9 +16,10 @@ public class AppMain extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getResource("root.fxml"));
 		Scene scene = new Scene(root);
-		primaryStage.setTitle("xim's");
+		primaryStage.setTitle("xim");
 		primaryStage.setScene(scene);
 		primaryStage.show();
+
 	}
 
 }

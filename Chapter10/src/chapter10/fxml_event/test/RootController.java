@@ -31,6 +31,7 @@ public class RootController implements Initializable {
 			String text = button2.getText();
 			labelMessage.setText(text);
 		});
+		
 		button3.setOnAction((e) -> handlerButton3Action(e));
 	}
 	

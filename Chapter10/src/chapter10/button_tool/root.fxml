@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="150.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.button_tool.RootController">
+<AnchorPane prefHeight="180.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.button_tool.RootController">
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
@@ -21,7 +21,7 @@
          </image>
       </ImageView>
       <Separator fx:id="separator" layoutX="199.0" layoutY="17.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="17.0" />
-      <RadioButton fx:id="radioButtonBubble" layoutX="223.0" layoutY="22.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="85.0" selected="true" text="BubbleChart" userData="BubbleChart">
+      <RadioButton fx:id="radioButtonBubble" layoutX="223.0" layoutY="22.0" mnemonicParsing="false" onAction="#handlerRadioButtonAction" prefHeight="18.0" prefWidth="85.0" selected="true" text="BubbleChart" userData="bubbleChart">
          <font>
             <Font size="10.0" />
          </font>
@@ -29,12 +29,12 @@
             <ToggleGroup fx:id="group" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="radioButtonBar" layoutX="223.0" layoutY="48.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="76.0" text="BarChart" toggleGroup="$group" userData="BarChart">
+      <RadioButton fx:id="radioButtonBar" layoutX="223.0" layoutY="48.0" mnemonicParsing="false" onAction="#handlerRadioButtonAction" prefHeight="18.0" prefWidth="76.0" text="BarChart" toggleGroup="$group" userData="barChart">
          <font>
             <Font size="10.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="radioButtonArea" layoutX="223.0" layoutY="74.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="76.0" text="AreaChart" toggleGroup="$group" userData="AreaChart">
+      <RadioButton fx:id="radioButtonArea" layoutX="223.0" layoutY="74.0" mnemonicParsing="false" onAction="#handlerRadioButtonAction" prefHeight="18.0" prefWidth="76.0" text="AreaChart" toggleGroup="$group" userData="areaChart">
          <font>
             <Font size="10.0" />
          </font>
@@ -44,12 +44,12 @@
             <Image url="@../../../bin/chapter10/button_tool/images/bubbleChart.png" />
          </image>
       </ImageView>
-      <Button fx:id="exitButton" layoutX="197.0" layoutY="106.0" mnemonicParsing="false" onAction="#handlerExitButtonAction" prefHeight="23.0" prefWidth="25.0">
+      <Button fx:id="exitButton" layoutX="191.0" layoutY="117.0" mnemonicParsing="false" onAction="#handlerExitButtonAction" prefHeight="30.0" prefWidth="30.0">
          <font>
             <Font size="9.0" />
          </font>
       </Button>
-      <ImageView fx:id="exitImage" fitHeight="20.0" fitWidth="20.0" layoutX="199.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="exitImage" fitHeight="20.0" fitWidth="20.0" layoutX="196.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../bin/chapter10/button_tool/images/exit.png" />
          </image>
