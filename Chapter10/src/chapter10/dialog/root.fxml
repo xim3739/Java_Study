@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.dialog.RootController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#handlerOpenFileChooser" text="OpenFile" />
+      <Button mnemonicParsing="false" onAction="#handlerSaveFileChooser" text="SaveFile" />
+      <Button mnemonicParsing="false" onAction="#handlerDirectoryChooser" text="Directory" />
+      <Button mnemonicParsing="false" onAction="#handlerPopUpChooser" text="PopUp" />
+      <Button mnemonicParsing="false" onAction="#handlerCustomChooser" text="Custom" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

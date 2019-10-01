@@ -20399,3 +20399,380 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.net 1 0 2019-10-01 08:16:12.415
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:09.715
+!MESSAGE Cannot handle apple.launcher [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  JavaAppLauncher$1.class (not open)
+  JavaAppLauncher.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:09.717
+!MESSAGE Cannot handle apple.applescript [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AppleScriptEngine.class
+    class AppleScriptEngine
+  AppleScriptEngineFactory$1.class (not open)
+  AppleScriptEngineFactory.class
+    class AppleScriptEngineFactory as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:09.717
+!MESSAGE Cannot handle apple [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:09.718
+!MESSAGE Cannot handle apple.laf [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AquaLookAndFeel.class
+    class AquaLookAndFeel
+  JRSUIConstants$ArrowsOnly.class
+    class ArrowsOnly
+  JRSUIConstants$BooleanValue.class (not open)
+  JRSUIConstants$Direction.class (not open)
+  JRSUIConstants$NoIndicator.class (not open)
+  JRSUIConstants$ScrollBarHit.class (not open)
+  JRSUIConstants$SegmentLeadingSeparator.class (not open)
+  JRSUIConstants$Variant.class (not open)
+  JRSUIConstants$WindowClipCorners.class (not open)
+  JRSUIConstants$WindowTitleBarSeparator.class (not open)
+  JRSUIConstants$WindowType.class (not open)
+  JRSUIFocus.class (not open)
+  JRSUIState$AnimationFrameState.class
+    class AnimationFrameState
+  JRSUIState$TitleBarHeightState.class (not open)
+  JRSUIUtils$HitDetection.class (not open)
+  JRSUIUtils$Images.class (not open)
+  JRSUIUtils$InternalFrame.class (not open)
+  JRSUIUtils$ScrollBar.class (not open)
+  JRSUIUtils$Tree.class (not open)
+  JRSUIUtils$TabbedPane.class (not open)
+  JRSUIUtils$NineSliceMetricsProvider.class (not open)
+  JRSUIUtils.class (not open)
+  JRSUIStateFactory.class (not open)
+  JRSUIState$ValueState.class (not open)
+  JRSUIState$ScrollBarState.class (not open)
+  JRSUIState.class
+    class JRSUIState
+  JRSUIControl$ThreadLocalByteBuffer.class (not open)
+  JRSUIControl$BufferState.class (not open)
+  JRSUIControl.class (not open)
+  JRSUIConstants$Widget.class (not open)
+  JRSUIConstants$State.class (not open)
+  JRSUIConstants$Size.class (not open)
+  JRSUIConstants$ShowArrows.class (not open)
+  JRSUIConstants$SegmentTrailingSeparator.class (not open)
+  JRSUIConstants$SegmentPosition.class (not open)
+  JRSUIConstants$ScrollBarPart.class (not open)
+  JRSUIConstants$PropertyEncoding.class (not open)
+  JRSUIConstants$Property.class
+    class Property
+  JRSUIConstants$Orientation.class (not open)
+  JRSUIConstants$NothingToScroll.class (not open)
+  JRSUIConstants$Key.class (not open)
+  JRSUIConstants$IndicatorOnly.class (not open)
+  JRSUIConstants$Hit.class (not open)
+  JRSUIConstants$FrameOnly.class (not open)
+  JRSUIConstants$Focused.class (not open)
+  JRSUIConstants$DoubleValue.class (not open)
+  JRSUIConstants$Animating.class
+    class Animating
+  JRSUIConstants$AlignmentVertical.class
+    class AlignmentVertical
+  JRSUIConstants$AlignmentHorizontal.class
+    class AlignmentHorizontal
+  JRSUIConstants.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:09.719
+!MESSAGE Cannot handle apple.security [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AppleProvider$1.class (not open)
+  AppleProvider.class
+    class AppleProvider
+  KeychainStore$1.class (not open)
+  KeychainStore$CertKeychainItemPair.class (not open)
+  KeychainStore$KeyEntry.class (not open)
+  KeychainStore$TrustedCertEntry.class (not open)
+  KeychainStore.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:17.944
+!MESSAGE Cannot handle apple.launcher [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  JavaAppLauncher$1.class (not open)
+  JavaAppLauncher.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:17.945
+!MESSAGE Cannot handle apple.applescript [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AppleScriptEngine.class
+    class AppleScriptEngine
+  AppleScriptEngineFactory$1.class (not open)
+  AppleScriptEngineFactory.class
+    class AppleScriptEngineFactory as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:17.946
+!MESSAGE Cannot handle apple [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:17.946
+!MESSAGE Cannot handle apple.laf [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AquaLookAndFeel.class
+    class AquaLookAndFeel
+  JRSUIConstants$ArrowsOnly.class
+    class ArrowsOnly
+  JRSUIConstants$BooleanValue.class (not open)
+  JRSUIConstants$Direction.class (not open)
+  JRSUIConstants$NoIndicator.class (not open)
+  JRSUIConstants$ScrollBarHit.class (not open)
+  JRSUIConstants$SegmentLeadingSeparator.class (not open)
+  JRSUIConstants$Variant.class (not open)
+  JRSUIConstants$WindowClipCorners.class (not open)
+  JRSUIConstants$WindowTitleBarSeparator.class (not open)
+  JRSUIConstants$WindowType.class (not open)
+  JRSUIFocus.class (not open)
+  JRSUIState$AnimationFrameState.class
+    class AnimationFrameState
+  JRSUIState$TitleBarHeightState.class (not open)
+  JRSUIUtils$HitDetection.class (not open)
+  JRSUIUtils$Images.class (not open)
+  JRSUIUtils$InternalFrame.class (not open)
+  JRSUIUtils$ScrollBar.class (not open)
+  JRSUIUtils$Tree.class (not open)
+  JRSUIUtils$TabbedPane.class (not open)
+  JRSUIUtils$NineSliceMetricsProvider.class (not open)
+  JRSUIUtils.class (not open)
+  JRSUIStateFactory.class (not open)
+  JRSUIState$ValueState.class (not open)
+  JRSUIState$ScrollBarState.class (not open)
+  JRSUIState.class
+    class JRSUIState
+  JRSUIControl$ThreadLocalByteBuffer.class (not open)
+  JRSUIControl$BufferState.class (not open)
+  JRSUIControl.class (not open)
+  JRSUIConstants$Widget.class (not open)
+  JRSUIConstants$State.class (not open)
+  JRSUIConstants$Size.class (not open)
+  JRSUIConstants$ShowArrows.class (not open)
+  JRSUIConstants$SegmentTrailingSeparator.class (not open)
+  JRSUIConstants$SegmentPosition.class (not open)
+  JRSUIConstants$ScrollBarPart.class (not open)
+  JRSUIConstants$PropertyEncoding.class (not open)
+  JRSUIConstants$Property.class
+    class Property
+  JRSUIConstants$Orientation.class (not open)
+  JRSUIConstants$NothingToScroll.class (not open)
+  JRSUIConstants$Key.class (not open)
+  JRSUIConstants$IndicatorOnly.class (not open)
+  JRSUIConstants$Hit.class (not open)
+  JRSUIConstants$FrameOnly.class (not open)
+  JRSUIConstants$Focused.class (not open)
+  JRSUIConstants$DoubleValue.class (not open)
+  JRSUIConstants$Animating.class
+    class Animating
+  JRSUIConstants$AlignmentVertical.class
+    class AlignmentVertical
+  JRSUIConstants$AlignmentHorizontal.class
+    class AlignmentHorizontal
+  JRSUIConstants.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:17.947
+!MESSAGE Cannot handle apple.security [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AppleProvider$1.class (not open)
+  AppleProvider.class
+    class AppleProvider
+  KeychainStore$1.class (not open)
+  KeychainStore$CertKeychainItemPair.class (not open)
+  KeychainStore$KeyEntry.class (not open)
+  KeychainStore$TrustedCertEntry.class (not open)
+  KeychainStore.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:18.075
+!MESSAGE Cannot handle apple.launcher [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  JavaAppLauncher$1.class (not open)
+  JavaAppLauncher.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:18.079
+!MESSAGE Cannot handle apple.applescript [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AppleScriptEngine.class
+    class AppleScriptEngine
+  AppleScriptEngineFactory$1.class (not open)
+  AppleScriptEngineFactory.class
+    class AppleScriptEngineFactory as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:18.079
+!MESSAGE Cannot handle apple [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:18.080
+!MESSAGE Cannot handle apple.laf [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AquaLookAndFeel.class
+    class AquaLookAndFeel
+  JRSUIConstants$ArrowsOnly.class
+    class ArrowsOnly
+  JRSUIConstants$BooleanValue.class (not open)
+  JRSUIConstants$Direction.class (not open)
+  JRSUIConstants$NoIndicator.class (not open)
+  JRSUIConstants$ScrollBarHit.class (not open)
+  JRSUIConstants$SegmentLeadingSeparator.class (not open)
+  JRSUIConstants$Variant.class (not open)
+  JRSUIConstants$WindowClipCorners.class (not open)
+  JRSUIConstants$WindowTitleBarSeparator.class (not open)
+  JRSUIConstants$WindowType.class (not open)
+  JRSUIFocus.class (not open)
+  JRSUIState$AnimationFrameState.class
+    class AnimationFrameState
+  JRSUIState$TitleBarHeightState.class (not open)
+  JRSUIUtils$HitDetection.class (not open)
+  JRSUIUtils$Images.class (not open)
+  JRSUIUtils$InternalFrame.class (not open)
+  JRSUIUtils$ScrollBar.class (not open)
+  JRSUIUtils$Tree.class (not open)
+  JRSUIUtils$TabbedPane.class (not open)
+  JRSUIUtils$NineSliceMetricsProvider.class (not open)
+  JRSUIUtils.class (not open)
+  JRSUIStateFactory.class (not open)
+  JRSUIState$ValueState.class (not open)
+  JRSUIState$ScrollBarState.class (not open)
+  JRSUIState.class
+    class JRSUIState
+  JRSUIControl$ThreadLocalByteBuffer.class (not open)
+  JRSUIControl$BufferState.class (not open)
+  JRSUIControl.class (not open)
+  JRSUIConstants$Widget.class (not open)
+  JRSUIConstants$State.class (not open)
+  JRSUIConstants$Size.class (not open)
+  JRSUIConstants$ShowArrows.class (not open)
+  JRSUIConstants$SegmentTrailingSeparator.class (not open)
+  JRSUIConstants$SegmentPosition.class (not open)
+  JRSUIConstants$ScrollBarPart.class (not open)
+  JRSUIConstants$PropertyEncoding.class (not open)
+  JRSUIConstants$Property.class
+    class Property
+  JRSUIConstants$Orientation.class (not open)
+  JRSUIConstants$NothingToScroll.class (not open)
+  JRSUIConstants$Key.class (not open)
+  JRSUIConstants$IndicatorOnly.class (not open)
+  JRSUIConstants$Hit.class (not open)
+  JRSUIConstants$FrameOnly.class (not open)
+  JRSUIConstants$Focused.class (not open)
+  JRSUIConstants$DoubleValue.class (not open)
+  JRSUIConstants$Animating.class
+    class Animating
+  JRSUIConstants$AlignmentVertical.class
+    class AlignmentVertical
+  JRSUIConstants$AlignmentHorizontal.class
+    class AlignmentHorizontal
+  JRSUIConstants.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:18.080
+!MESSAGE Cannot handle apple.security [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AppleProvider$1.class (not open)
+  AppleProvider.class
+    class AppleProvider
+  KeychainStore$1.class (not open)
+  KeychainStore$CertKeychainItemPair.class (not open)
+  KeychainStore$KeyEntry.class (not open)
+  KeychainStore$TrustedCertEntry.class (not open)
+  KeychainStore.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:18.487
+!MESSAGE Cannot handle apple.launcher [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  JavaAppLauncher$1.class (not open)
+  JavaAppLauncher.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:18.487
+!MESSAGE Cannot handle apple.applescript [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AppleScriptEngine.class
+    class AppleScriptEngine
+  AppleScriptEngineFactory$1.class (not open)
+  AppleScriptEngineFactory.class
+    class AppleScriptEngineFactory as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:18.488
+!MESSAGE Cannot handle apple [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:18.489
+!MESSAGE Cannot handle apple.laf [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AquaLookAndFeel.class
+    class AquaLookAndFeel
+  JRSUIConstants$ArrowsOnly.class
+    class ArrowsOnly
+  JRSUIConstants$BooleanValue.class (not open)
+  JRSUIConstants$Direction.class (not open)
+  JRSUIConstants$NoIndicator.class (not open)
+  JRSUIConstants$ScrollBarHit.class (not open)
+  JRSUIConstants$SegmentLeadingSeparator.class (not open)
+  JRSUIConstants$Variant.class (not open)
+  JRSUIConstants$WindowClipCorners.class (not open)
+  JRSUIConstants$WindowTitleBarSeparator.class (not open)
+  JRSUIConstants$WindowType.class (not open)
+  JRSUIFocus.class (not open)
+  JRSUIState$AnimationFrameState.class
+    class AnimationFrameState
+  JRSUIState$TitleBarHeightState.class (not open)
+  JRSUIUtils$HitDetection.class (not open)
+  JRSUIUtils$Images.class (not open)
+  JRSUIUtils$InternalFrame.class (not open)
+  JRSUIUtils$ScrollBar.class (not open)
+  JRSUIUtils$Tree.class (not open)
+  JRSUIUtils$TabbedPane.class (not open)
+  JRSUIUtils$NineSliceMetricsProvider.class (not open)
+  JRSUIUtils.class (not open)
+  JRSUIStateFactory.class (not open)
+  JRSUIState$ValueState.class (not open)
+  JRSUIState$ScrollBarState.class (not open)
+  JRSUIState.class
+    class JRSUIState
+  JRSUIControl$ThreadLocalByteBuffer.class (not open)
+  JRSUIControl$BufferState.class (not open)
+  JRSUIControl.class (not open)
+  JRSUIConstants$Widget.class (not open)
+  JRSUIConstants$State.class (not open)
+  JRSUIConstants$Size.class (not open)
+  JRSUIConstants$ShowArrows.class (not open)
+  JRSUIConstants$SegmentTrailingSeparator.class (not open)
+  JRSUIConstants$SegmentPosition.class (not open)
+  JRSUIConstants$ScrollBarPart.class (not open)
+  JRSUIConstants$PropertyEncoding.class (not open)
+  JRSUIConstants$Property.class
+    class Property
+  JRSUIConstants$Orientation.class (not open)
+  JRSUIConstants$NothingToScroll.class (not open)
+  JRSUIConstants$Key.class (not open)
+  JRSUIConstants$IndicatorOnly.class (not open)
+  JRSUIConstants$Hit.class (not open)
+  JRSUIConstants$FrameOnly.class (not open)
+  JRSUIConstants$Focused.class (not open)
+  JRSUIConstants$DoubleValue.class (not open)
+  JRSUIConstants$Animating.class
+    class Animating
+  JRSUIConstants$AlignmentVertical.class
+    class AlignmentVertical
+  JRSUIConstants$AlignmentHorizontal.class
+    class AlignmentHorizontal
+  JRSUIConstants.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 10:21:18.489
+!MESSAGE Cannot handle apple.security [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar]
+  AppleProvider$1.class (not open)
+  AppleProvider.class
+    class AppleProvider
+  KeychainStore$1.class (not open)
+  KeychainStore$CertKeychainItemPair.class (not open)
+  KeychainStore$KeyEntry.class (not open)
+  KeychainStore$TrustedCertEntry.class (not open)
+  KeychainStore.class (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 11:27:40.782
+!MESSAGE Cannot handle netscape.javascript [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/jfxrt.jar]
+  JSException.class (not open)
+  JSObject.class
+    class JSObject as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 11:27:40.784
+!MESSAGE Cannot handle netscape [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/jfxrt.jar] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 11:27:41.152
+!MESSAGE Cannot handle note [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 11:27:41.153
+!MESSAGE Cannot handle netscape.javascript [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/jfxrt.jar]
+  JSException.class (not open)
+  JSObject.class
+    class JSObject as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 11:27:41.154
+!MESSAGE Cannot handle note.init_test [in src [in Chapter10]]
+  InitTest.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-10-01 11:27:41.154
+!MESSAGE Cannot handle netscape [in /Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/ext/jfxrt.jar] as return type.

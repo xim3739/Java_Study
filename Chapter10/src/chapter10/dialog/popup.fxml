@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox id="hBox" alignment="CENTER" style="-fx-background-color: black; -fx-background-radius: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <ImageView id="imageView" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../bin/chapter10/dialog/icon/dialog-info.png" />
+         </image>
+         <HBox.margin>
+            <Insets left="2.0" />
+         </HBox.margin>
+      </ImageView>
+      <Label id="label" text="메세지가 왔습니다." textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="5.0" right="5.0" />
+         </HBox.margin>
+      </Label>
+   </children>
+</HBox>

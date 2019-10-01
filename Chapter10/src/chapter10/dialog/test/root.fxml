@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox alignment="CENTER_RIGHT" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.dialog.test.RootController">
+   <children>
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handlerMyCustomChooser" text="심재현의 창">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </Button>
+   </children>
+</HBox>

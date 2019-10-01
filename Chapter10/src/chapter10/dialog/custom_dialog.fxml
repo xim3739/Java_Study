@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../bin/chapter10/dialog/icon/dialog-warning.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="88.0" layoutY="34.0" text="시험 점수를 입력하세요." />
+      <Label layoutX="83.0" layoutY="79.0" text="영어" />
+      <Label layoutX="83.0" layoutY="114.0" text="국어" />
+      <Label layoutX="83.0" layoutY="149.0" text="음악" />
+      <TextField id="textFieldEnglish" layoutX="124.0" layoutY="74.0" prefHeight="27.0" prefWidth="95.0" />
+      <TextField id="textFieldKorean" layoutX="124.0" layoutY="109.0" prefHeight="27.0" prefWidth="95.0" />
+      <TextField id="textFieldMusic" layoutX="124.0" layoutY="144.0" prefHeight="27.0" prefWidth="95.0" />
+      <Button id="buttonOk" layoutX="288.0" layoutY="78.0" mnemonicParsing="false" text="확인" />
+      <Button id="buttonDelete" layoutX="288.0" layoutY="138.0" mnemonicParsing="false" text="삭제" />
+      <Separator layoutX="252.0" layoutY="75.0" orientation="VERTICAL" prefHeight="98.0" prefWidth="9.0" />
+   </children>
+</AnchorPane>
