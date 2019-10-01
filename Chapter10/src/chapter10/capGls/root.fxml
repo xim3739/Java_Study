@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.capGls.Root">
+   <children>
+      <CheckBox fx:id="glasses" layoutX="52.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleCheckBoxAction" text="안경">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="cap" layoutX="51.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleCheckBoxAction" text="모자">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <ImageView fx:id="imageV" fitHeight="116.0" fitWidth="114.0" layoutX="145.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../bin/chapter10/capGls/images/geek.gif" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="radOne" layoutX="465.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleGroupAction" text="no1">
+         <toggleGroup>
+            <ToggleGroup fx:id="group" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="radTh" layoutX="461.0" layoutY="129.0" mnemonicParsing="false" onAction="#handleGroupAction" text="no3" toggleGroup="$group" />
+      <RadioButton fx:id="radTwo" layoutX="462.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleGroupAction" text="no2" toggleGroup="$group" />
+      <ImageView fx:id="imageVV" fitHeight="119.0" fitWidth="103.0" layoutX="314.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../bin/chapter10/capGls/images/bubbleChart.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="button" layoutX="230.0" layoutY="211.0" mnemonicParsing="false" text="Exit" />
+   </children>
+</AnchorPane>

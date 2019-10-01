@@ -26,22 +26,17 @@ public class RootContrller implements Initializable {
 	private TableView<Phone> tableView;
 	@FXML
 	private ImageView imageView;
-	@FXML
-	private Button buttonOk;
-	@FXML
-	private Button buttonCancle;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		insertListViewItemAndEventProcess();
-		// listView 항목 삽입하고 이벤트 처리
+		
+		insertListViewDataAndProcess();
+		
+		insertTableViewDataAndProcess();
 
-		insertTableViewItemAndEventProcess();
-		// tableView
 	}
-
-	private void insertTableViewItemAndEventProcess() {
-
+	
+	private void insertTableViewDataAndProcess() {
 		ObservableList<Phone> tableViewData = FXCollections.observableArrayList();
 		tableViewData.add(new Phone("갤럭시 s1", "phone01.png"));
 		tableViewData.add(new Phone("갤럭시 s2", "phone02.png"));
@@ -50,29 +45,31 @@ public class RootContrller implements Initializable {
 		tableViewData.add(new Phone("갤럭시 s5", "phone05.png"));
 		tableViewData.add(new Phone("갤럭시 s6", "phone06.png"));
 		tableViewData.add(new Phone("갤럭시 s7", "phone07.png"));
-
+		
 		TableColumn tcPhoneName = tableView.getColumns().get(0);
 		tcPhoneName.setCellValueFactory(new PropertyValueFactory("phoneName"));
-		tcPhoneName.setStyle("-fx-alignmetn: CENTER;");
-
+		tcPhoneName.setStyle("-fx-alignment: CENTER;");
+		
 		TableColumn tcPhoneImage = tableView.getColumns().get(1);
 		tcPhoneImage.setCellValueFactory(new PropertyValueFactory("phoneImage"));
-		tcPhoneImage.setStyle("-fx-alignmetn: CENTER;");
-
+		tcPhoneImage.setStyle("-fx-alignment: CENTER;");
+		
 		tableView.setItems(tableViewData);
-
+		
 		tableView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Phone>() {
 
 			@Override
-			public void changed(ObservableValue<? extends Phone> observable, Phone oldValue, Phone phone) {
-				Image imageData = new Image(getClass().getResource("images/" + phone.getPhoneImage()).toString());
-				imageView.setImage(imageData);
+			public void changed(ObservableValue<? extends Phone> observable, Phone oldValue, Phone newValue) {
+				Image image = new Image(getClass().getResource("images/" + newValue.getPhoneImage()).toString());
+				imageView.setImage(image);
 			}
 		});
-
+		
 	}
+	
+	
 
-	private void insertListViewItemAndEventProcess() {
+	private void insertListViewDataAndProcess() {
 		ObservableList<String> listViewData = FXCollections.observableArrayList();
 		listViewData.add("갤럭시 s1");
 		listViewData.add("갤럭시 s2");
@@ -89,17 +86,14 @@ public class RootContrller implements Initializable {
 			@Override
 			public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
 				tableView.getSelectionModel().select(newValue.intValue());
-				tableView.scrollTo(newValue.intValue());
 			}
 		});
-
 	}
 
 	public void handlerButtonOkAction(ActionEvent e) {
-		String data = listView.getSelectionModel().getSelectedItem();
-		System.out.println(data);
-		Phone phone = tableView.getSelectionModel().getSelectedItem();
-		System.out.println(phone);
+		String listData = listView.getSelectionModel().getSelectedItem();
+		String data = tableView.getSelectionModel().getSelectedItem().toString();
+		System.out.println(listData + " " + data);
 	}
 
 	public void handlerButtonCancleAction(ActionEvent e) {

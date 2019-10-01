@@ -102,7 +102,7 @@ public class RootController implements Initializable {
 		TableColumn tcPhoneImage = tableView.getColumns().get(1);
 		tcPhoneImage.setCellValueFactory(new PropertyValueFactory("phoneImage"));
 		// TableColumn 과 객체 안의 멤버와 연결을 시켜야 하므로 TableColumn을 사용한다.
-		// tableView.getColumns() 함수를 이용해서 column정보를 가져오고 get(0) 그 column의 인덱스를
+		// tableView.getColumns() 함수를 이용해서 column정보를 가져오고 get(1) 그 column의 인덱스를
 		// 가져온다.(콜롬은 콜롬이 몇개있는지 가져오는것, get으로 정확한 콜롬을 가져온다.)
 
 		tableView.setItems(tableViewData);
@@ -124,10 +124,11 @@ public class RootController implements Initializable {
 		// new ChangeListener 바뀌는 이벤트를 전달 해야 하므로 ChangeListener를 만든다.
 		// tableView 는 변경된 사항을 가지고 이미지를 전달하는 동작을 해야하므로 이미지 객체를 만든다.
 		// 이미지 객체의 주소는 getClass()를 가져오고 getResource()소스의 주소를 가져온다.
-		//"images/" + newValue.getPhoneImage()).toString() 
-		// images/ 는 주소의 시작이고 newValue.getPhoneImage()는 최근에 속성이 변경된 객체 newValue는 즉 Phone을 가지고 있다.
-		//그 phone의 이미지를 가져온다. (get 사용)
-		//toString으로 찍는다. 스트링으로 가져와야 하므로
+		// "images/" + newValue.getPhoneImage()).toString()
+		// images/ 는 주소의 시작이고 newValue.getPhoneImage()는 최근에 속성이 변경된 객체 newValue는 즉
+		// Phone을 가지고 있다.
+		// 그 phone의 이미지를 가져온다. (get 사용)
+		// toString으로 찍는다. 스트링으로 가져와야 하므로
 
 	}
 

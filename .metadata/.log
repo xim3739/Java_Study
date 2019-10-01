@@ -19560,3 +19560,842 @@ java.lang.Exception: Resource already exists on disk: '/example18/bin/.DS_Store'
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2019-09-27 10:19:52.151
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7196)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3472)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3445)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4145)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3812)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2019-09-27 10:21:04.852
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7196)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3472)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3445)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4145)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3812)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2019-09-27 10:21:42.597
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7196)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3472)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3445)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4145)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3812)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2019-09-27 10:22:30.359
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7196)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3472)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3445)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4145)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3812)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2019-09-27 10:24:50.710
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7196)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3472)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3445)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4145)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3812)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2019-09-27 16:07:14.111
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7196)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3472)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3445)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4145)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3812)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2019-09-27 16:12:47.436
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7196)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3472)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3445)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4145)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3812)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2019-09-27 16:13:28.477
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7196)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3472)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3445)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4145)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3812)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2019-09-27 16:41:07.989
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7196)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3472)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3445)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4145)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3812)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY org.eclipse.ui.workbench.texteditor 4 0 2019-09-27 16:47:25.217
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7196)
+	at org.eclipse.ui.internal.Workbench.getFilteredSaveables(Workbench.java:3472)
+	at org.eclipse.ui.internal.Workbench.saveAll(Workbench.java:3445)
+	at org.eclipse.ui.ide.IDE$1.run(IDE.java:1495)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.ide.IDE.saveAllEditors(IDE.java:1483)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.doSave(SaveScopeResourcesHandler.java:228)
+	at org.eclipse.debug.internal.ui.launchConfigurations.SaveScopeResourcesHandler.handleStatus(SaveScopeResourcesHandler.java:182)
+	at org.eclipse.debug.internal.ui.sourcelookup.Prompter.lambda$0(Prompter.java:73)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:171)
+	at org.eclipse.ui.internal.UISynchronizer.lambda$0(UISynchronizer.java:152)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4145)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3812)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1160)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1049)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:633)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:150)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+!SESSION 2019-09-28 15:38:28.525 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-09-28 15:38:38.235
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.949
+!MESSAGE Cannot handle chapter10 [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.952
+!MESSAGE Cannot handle chapter10.circle.bind [in src [in Chapter10]]
+  RootController.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.952
+!MESSAGE Cannot handle chapte10 [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.953
+!MESSAGE Cannot handle chapter10.anchorpane.test [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.953
+!MESSAGE Cannot handle chapter10.view_ontroll [in src [in Chapter10]]
+  RootContrller.java (not open)
+  AppMain.java (not open)
+  Phone.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.953
+!MESSAGE Cannot handle chapter10.propertis [in src [in Chapter10]]
+  RootController.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.953
+!MESSAGE Cannot handle chapter10.media_player.media [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.954
+!MESSAGE Cannot handle chapter10.view_ontroll.images [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.954
+!MESSAGE Cannot handle chapter10.vbox [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.955
+!MESSAGE Cannot handle chapter10.event.test [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.955
+!MESSAGE Cannot handle chapter10.anchorpane [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.955
+!MESSAGE Cannot handle chapter10.media_player [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.956
+!MESSAGE Cannot handle chapter10.gridpane [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.956
+!MESSAGE Cannot handle chapter10.javafx [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.956
+!MESSAGE Cannot handle chapter10.hbox.test [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.957
+!MESSAGE Cannot handle chapter10.view_controller.test [in src [in Chapter10]]
+  RootController.java (not open)
+  Phone.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.957
+!MESSAGE Cannot handle chapter10.view_ontroll.copy [in src [in Chapter10]]
+  RootContrller.java (not open)
+  Phone.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.957
+!MESSAGE Cannot handle chapter10.hbox [in src [in Chapter10]]
+  MyApp.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.957
+!MESSAGE Cannot handle chapter10.button_tool [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.958
+!MESSAGE Cannot handle chapter10.circle.test [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.958
+!MESSAGE Cannot handle chapter10.event [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.958
+!MESSAGE Cannot handle chapter10.propertis.bind [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.959
+!MESSAGE Cannot handle chapter10.circle [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.959
+!MESSAGE Cannot handle chapter10.slider.test [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.959
+!MESSAGE Cannot handle chapter10.propertis.copy [in src [in Chapter10]]
+  RootController.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.960
+!MESSAGE Cannot handle chapter10.view_ontroll.copy.images [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.960
+!MESSAGE Cannot handle chapter10.view_controller [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.960
+!MESSAGE Cannot handle chapter10.slider [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.960
+!MESSAGE Cannot handle chapter10.input_control [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.961
+!MESSAGE Cannot handle chapter10.boderpane [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.961
+!MESSAGE Cannot handle chapter10.flowpane [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.961
+!MESSAGE Cannot handle chapter10.fxml_event.test [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.962
+!MESSAGE Cannot handle chapter10.button_tool.images [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.962
+!MESSAGE Cannot handle chapter10.bind.test [in src [in Chapter10]]
+  RootController.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.962
+!MESSAGE Cannot handle chapter10.fxml_event [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.963
+!MESSAGE Cannot handle chapter10.tilepane [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.963
+!MESSAGE Cannot handle chapter10.view_controller.test.images [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.963
+!MESSAGE Cannot handle chapter10.bind [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.964
+!MESSAGE Cannot handle chapte10.slidertest [in src [in Chapter10]]
+  [Working copy] RootController.java
+    package chapte10.slidertest
+    import java.net.URL
+    import java.util.ResourceBundle
+    import javafx.fxml.FXML
+    import javafx.fxml.Initializable
+    import javafx.scene.control.Label
+    import javafx.scene.control.Slider
+    class RootController
+      Label label
+      Slider slider
+      void initialize(URL, ResourceBundle)
+  [Working copy] AppMain.java
+    package chapte10.slidertest
+    import javafx.application.Application
+    import javafx.fxml.FXMLLoader
+    import javafx.scene.Parent
+    import javafx.scene.Scene
+    import javafx.stage.Stage
+    class AppMain
+      static void main(String[])
+      void start(Stage) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 16:04:40.964
+!MESSAGE Cannot handle chapter10.javafx.main [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.968
+!MESSAGE Cannot handle chapter10 [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.971
+!MESSAGE Cannot handle chapter10.circle.bind [in src [in Chapter10]]
+  RootController.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.972
+!MESSAGE Cannot handle chapte10 [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.972
+!MESSAGE Cannot handle chapter10.anchorpane.test [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.972
+!MESSAGE Cannot handle chapter10.view_ontroll [in src [in Chapter10]]
+  RootContrller.java (not open)
+  AppMain.java (not open)
+  Phone.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.973
+!MESSAGE Cannot handle chapter10.propertis [in src [in Chapter10]]
+  RootController.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.973
+!MESSAGE Cannot handle chapter10.media_player.media [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.973
+!MESSAGE Cannot handle chapter10.view_ontroll.images [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.974
+!MESSAGE Cannot handle chapter10.vbox [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.974
+!MESSAGE Cannot handle chapter10.event.test [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.974
+!MESSAGE Cannot handle chapter10.anchorpane [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.975
+!MESSAGE Cannot handle chapter10.capGls [in src [in Chapter10]]
+  [Working copy] Root.java
+    package chapter10.capGls
+    import java.net.URL
+    import java.util.ResourceBundle
+    import javafx.event.ActionEvent
+    import javafx.event.EventHandler
+    import javafx.fxml.FXML
+    import javafx.fxml.Initializable
+    import javafx.scene.control.Button
+    import javafx.scene.control.CheckBox
+    import javafx.scene.control.RadioButton
+    import javafx.scene.image.Image
+    import javafx.scene.image.ImageView
+    class Root
+      CheckBox glasses
+      CheckBox cap
+      ImageView imageV
+      ImageView imageVV
+      RadioButton radOne
+      RadioButton radTwo
+      RadioButton radTh
+      Button button
+      void initialize(URL, ResourceBundle)
+      void handleCheckBoxAction(ActionEvent)
+      void handleGroupAction()
+  [Working copy] Appmain.java
+    package chapter10.capGls
+    import javafx.application.Application
+    import javafx.fxml.FXMLLoader
+    import javafx.scene.Parent
+    import javafx.scene.Scene
+    import javafx.stage.Stage
+    class Appmain
+      static void main(String[])
+      void start(Stage) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.975
+!MESSAGE Cannot handle chapter10.text [in src [in Chapter10]]
+  RootController.java (not open)
+  Appmain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.975
+!MESSAGE Cannot handle chapter10.media_player [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.975
+!MESSAGE Cannot handle chapter10.gridpane [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.976
+!MESSAGE Cannot handle chapter10.javafx [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.976
+!MESSAGE Cannot handle chapter10.hbox.test [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.976
+!MESSAGE Cannot handle chapter10.view_controller.test [in src [in Chapter10]]
+  RootController.java (not open)
+  Phone.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.976
+!MESSAGE Cannot handle chapter10.view_ontroll.copy [in src [in Chapter10]]
+  RootContrller.java (not open)
+  Phone.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.977
+!MESSAGE Cannot handle chapter10.hbox [in src [in Chapter10]]
+  MyApp.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.977
+!MESSAGE Cannot handle chapter10.button_tool [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.977
+!MESSAGE Cannot handle chapter10.circle.test [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.977
+!MESSAGE Cannot handle chapter10.event [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.978
+!MESSAGE Cannot handle chapter10.propertis.bind [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.978
+!MESSAGE Cannot handle chapter10.circle [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.978
+!MESSAGE Cannot handle chapter10.slider.test [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.979
+!MESSAGE Cannot handle chapter10.capGls.images [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.979
+!MESSAGE Cannot handle chapter10.propertis.copy [in src [in Chapter10]]
+  RootController.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.979
+!MESSAGE Cannot handle chapter10.view_ontroll.copy.images [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.979
+!MESSAGE Cannot handle chapter10.view_controller [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.980
+!MESSAGE Cannot handle chapter10.slider [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.980
+!MESSAGE Cannot handle chapter10.input_control [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.980
+!MESSAGE Cannot handle chapter10.boderpane [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.980
+!MESSAGE Cannot handle chapter10.flowpane [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.981
+!MESSAGE Cannot handle chapter10.fxml_event.test [in src [in Chapter10]]
+  AppMain.java (not open)
+  RootController.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.981
+!MESSAGE Cannot handle chapter10.button_tool.images [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.981
+!MESSAGE Cannot handle chapter10.bind.test [in src [in Chapter10]]
+  RootController.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.982
+!MESSAGE Cannot handle chapter10.fxml_event [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.982
+!MESSAGE Cannot handle chapter10.tilepane [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.982
+!MESSAGE Cannot handle chapter10.view_controller.test.images [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.983
+!MESSAGE Cannot handle chapter10.bind [in src [in Chapter10]] as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.983
+!MESSAGE Cannot handle chapte10.slidertest [in src [in Chapter10]]
+  RootController.java (not open)
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.983
+!MESSAGE Cannot handle chapter10.javafx.main [in src [in Chapter10]]
+  AppMain.java (not open) as return type.
+
+!ENTRY org.eclipse.jdt.core.manipulation 4 10001 2019-09-28 18:52:45.983
+!MESSAGE Cannot handle chapter10.circletest [in src [in Chapter10]]
+  RootController.java (not open)
+  AppMain.java (not open) as return type.
+!SESSION 2019-10-01 08:16:02.068 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/xim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2019-10-01 08:16:12.415
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ksm.test.RootController">
+   <children>
+      <Label fx:id="labelHi" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="145.0" layoutY="92.0" prefHeight="14.0" prefWidth="11.0" text="hi" />
+      <Slider fx:id="slider" layoutX="14.0" layoutY="157.0" prefHeight="16.0" prefWidth="228.0" />
+   </children>
+</AnchorPane>
