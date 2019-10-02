@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="paneAnchor" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.change_window.LoginController">
+   <children>
+      <Label layoutX="134.0" layoutY="40.0" style="-fx-font-size: 35;" text="Login Window" />
+      <Label layoutX="74.0" layoutY="124.0" text="Label" />
+      <Label layoutX="74.0" layoutY="194.0" text="Label" />
+      <Button layoutX="149.0" layoutY="269.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="257.0" layoutY="269.0" mnemonicParsing="false" text="Button" />
+      <PasswordField layoutX="149.0" layoutY="189.0" />
+      <TextField layoutX="149.0" layoutY="119.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="338.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../bin/chapter10/change_window/image/스크린샷%202019-10-02%20오후%203.26.55.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonToMain" layoutX="367.0" layoutY="269.0" mnemonicParsing="false" text="ToMain" />
+   </children>
+</AnchorPane>

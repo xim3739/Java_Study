@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="280.0" styleClass="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chapter10.css_example.RootController">
+   <children>
+      <Label id="labelTitle" alignment="CENTER" layoutX="41.0" layoutY="17.0" text="WELLCOME" />
+      <Label layoutX="35.0" layoutY="78.0" text="ID" />
+      <Label layoutX="11.0" layoutY="118.0" text="Password" />
+      <TextField layoutX="79.0" layoutY="73.0" />
+      <PasswordField layoutX="79.0" layoutY="113.0" />
+      <Button layoutX="93.0" layoutY="153.0" mnemonicParsing="false" text="로그인" />
+      <Button layoutX="176.0" layoutY="153.0" mnemonicParsing="false" text="회원가입" />
+   </children>
+</AnchorPane>

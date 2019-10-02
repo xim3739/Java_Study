@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="paneAnchor" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: lightgray;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.change_window.test.LoginController">
+   <children>
+      <Label layoutX="184.0" layoutY="71.0" style="-fx-font-size: 35;" text="Login Window" />
+      <Label layoutX="102.0" layoutY="177.0" text="Login" />
+      <Label layoutX="89.0" layoutY="242.0" text="Password" />
+      <PasswordField fx:id="tfPassoword" layoutX="163.0" layoutY="237.0" />
+      <TextField fx:id="tfId" layoutX="163.0" layoutY="172.0" />
+      <Button fx:id="btLogin" layoutX="163.0" layoutY="352.0" mnemonicParsing="false" text="Login" />
+      <Button fx:id="btCancle" layoutX="271.0" layoutY="352.0" mnemonicParsing="false" text="Cancle" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="361.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../bin/chapter10/change_window/test/image/MainImage.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btToMain" layoutX="388.0" layoutY="352.0" mnemonicParsing="false" text="toMain" />
+      <TextArea fx:id="textArea" layoutX="164.0" layoutY="274.0" prefHeight="67.0" prefWidth="167.0" />
+   </children>
+</AnchorPane>

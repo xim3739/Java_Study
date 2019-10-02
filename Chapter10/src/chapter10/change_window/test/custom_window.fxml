@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="paneAnchor" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.change_window.test.CustomController">
+   <children>
+      <Label layoutX="181.0" layoutY="51.0" style="-fx-font-size: 35;" text="Score Window" />
+      <Button fx:id="btToMain" layoutX="483.0" layoutY="368.0" mnemonicParsing="false" text="toMain" />
+      <Button fx:id="btRemove" layoutX="483.0" layoutY="255.0" mnemonicParsing="false" text="remove" />
+      <Button fx:id="btAvg" layoutX="483.0" layoutY="206.0" mnemonicParsing="false" text="Avg" />
+      <Button fx:id="btTotal" layoutX="483.0" layoutY="160.0" mnemonicParsing="false" text="total" />
+      <Label layoutX="83.0" layoutY="165.0" text="Korean" />
+      <Label layoutX="83.0" layoutY="211.0" text="English" />
+      <Label layoutX="84.0" layoutY="260.0" text="Music" />
+      <Label layoutX="89.0" layoutY="324.0" text="total" />
+      <Label layoutX="90.0" layoutY="373.0" text="Avg" />
+      <TextField fx:id="tfKorean" layoutX="154.0" layoutY="160.0" />
+      <TextField fx:id="tfEnglish" layoutX="154.0" layoutY="206.0" />
+      <TextField fx:id="tfMusic" layoutX="154.0" layoutY="255.0" />
+      <Label fx:id="lbTotal" layoutX="221.0" layoutY="324.0" />
+      <Label fx:id="lbAvg" layoutX="221.0" layoutY="373.0" />
+   </children>
+</AnchorPane>

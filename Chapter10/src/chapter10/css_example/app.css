@@ -1,0 +1,16 @@
+.root{
+	-fx-background-color : lightgray;
+}
+
+#labelTitle{
+	-fx-font-size : 35px;
+	-fx-font-family : "Arial Black";
+	-fx-text-fill:linear-gradient(to bottom, darkgray, lightgray);
+	-fx-effect: innerShadow(three-pass-box, rgba(0, 0, 0, 0.7), 3, 0, 2, 2.1);
+}
+Button:pressed{
+	-fx-effect: innerShadow(three-pass-box, rgba(0, 0, 0, 0.7), 3, 0, 2, 2.1);
+}
+Button:hover{
+	-fx-background-color : linear-gradient(#2a5058, #61a2b1);
+}

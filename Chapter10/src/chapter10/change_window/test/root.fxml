@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane fx:id="paneStack" prefHeight="500.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="chapter10.change_window.test.RootController">
+   <children>
+      <AnchorPane>
+         <children>
+            <Label layoutX="189.0" layoutY="80.0" style="-fx-font-size: 35;" text="Main Window" />
+            <Button fx:id="buttonLogin" layoutX="192.0" layoutY="388.0" mnemonicParsing="false" text="Login" />
+            <Button fx:id="buttonScore" layoutX="357.0" layoutY="388.0" mnemonicParsing="false" text="Score" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="244.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../bin/chapter10/change_window/test/image/MainImage.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
