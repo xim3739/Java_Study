@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+
+<TabPane prefHeight="700.0" prefWidth="900.0"
+   tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="controller.MainController">
+   <tabs>
+      <Tab text="첫번째 ">
+         <content>
+            <AnchorPane prefHeight="680.0" prefWidth="845.0">
+               <children>
+                  <Label text="이름" layoutX="100.0" layoutY="200.0"
+                     textFill="RED" />
+                  <TextField fx:id="txtName" layoutX="140.0"
+                     layoutY="200.0" />
+                  <Button fx:id="btnInsert" layoutX="300.0" layoutY="400.0"
+                     text="등록" />
+                  <Button fx:id="btnDelete" layoutX="450.0" layoutY="500.0"
+                     text="삭제" />
+                  <Button fx:id="btnEnd" layoutX="320.0" layoutY="550.0"
+                     prefHeight="50.0" prefWidth="90.0" text="종료" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="두번째">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <Button fx:id="btnOk" layoutX="500.0" layoutY="550.0"
+                     prefHeight="50.0" prefWidth="90.0" text="확인" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

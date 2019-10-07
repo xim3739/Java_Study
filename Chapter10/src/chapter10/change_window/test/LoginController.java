@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -34,7 +35,7 @@ public class LoginController implements Initializable {
 		});
 		
 	}// end of initialize
-
+	
 	private void buttonToMainAction(ActionEvent e) {
 		StackPane paneStack = (StackPane) btToMain.getScene().getRoot();
 		paneStack.getChildren().remove(paneAnchor);

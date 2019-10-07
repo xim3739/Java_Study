@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="310.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.LoginController">
+   <children>
+   	<VBox alignment="CENTER">
+   		<padding>
+   			<Insets bottom="20" left="10" right="10" top="20" />
+   		</padding>
+   		<spacing>10</spacing>
+   		<children>
+   			<Label text="로 그 인" />
+   			<HBox alignment="CENTER">
+      <children>
+      				<ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+      					<image>
+      						<Image url="@../image/MainImage.jpeg" />
+      					</image>
+      				</ImageView>
+      </children>
+   			</HBox>
+   			<Separator prefHeight="30" prefWidth="400" />
+   			<HBox alignment="CENTER">
+      <children>
+      				<Label text="아 이 디 : " />
+      				<TextField fx:id="txtId" />
+      </children>
+   			</HBox>
+   			<HBox alignment="CENTER">
+      <children>
+      				<Label text="비밀번호 : " />
+      				<PasswordField fx:id="txtPassword" />
+      </children>
+   			</HBox>
+   			<HBox alignment="CENTER">
+   				<padding>
+   					<Insets bottom="20" left="10" right="10" top="20" />
+   				</padding>
+   				<spacing>20</spacing>
+      <children>
+      				<Button fx:id="btnLogin" text="로그인" />
+      				<Button fx:id="btnCancel" text="닫기" />
+      </children>
+   			</HBox>
+   		</children>
+   	</VBox>
+   </children>
+</AnchorPane>
