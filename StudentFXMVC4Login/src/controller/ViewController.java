@@ -15,7 +15,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
 import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -83,6 +85,8 @@ public class ViewController implements Initializable {
 	private RadioButton rbFemale;
 	@FXML
 	private TableView<Student> tableView;
+	@FXML
+	private Button btnBarChart;
 
 	ObservableList<Student> studentData;
 
@@ -120,9 +124,11 @@ public class ViewController implements Initializable {
 		btnExit.setOnAction(e7 -> Platform.exit());
 
 		tableView.setOnMousePressed(e6 -> handlerTableViewSelectEvent(e6));
-		
+
 		tableView.setOnMouseClicked(e7 -> handlerPieChartAction(e7));
-		
+
+		btnBarChart.setOnAction(e8 -> handlerBarChartAction(e8));
+
 		// button actions
 
 	}// end of initialize
@@ -410,48 +416,48 @@ public class ViewController implements Initializable {
 	}// end of handlerButtonSearchAction
 
 	private void handlerTableViewSelectEvent(MouseEvent e6) {
-		
+
 		try {
-		editDelete = true;
-		buttonInitSetting(true, true, true, true, false, false, false);
+			editDelete = true;
+			buttonInitSetting(true, true, true, true, false, false, false);
 
-		selectStudentIndex = tableView.getSelectionModel().getSelectedIndex();
-		selectStudent = tableView.getSelectionModel().getSelectedItems();
+			selectStudentIndex = tableView.getSelectionModel().getSelectedIndex();
+			selectStudent = tableView.getSelectionModel().getSelectedItems();
 
-		txtName.setText(selectStudent.get(0).getName());
+			txtName.setText(selectStudent.get(0).getName());
 
-		if (selectStudent.get(0).getGender().equals("남성")) {
+			if (selectStudent.get(0).getGender().equals("남성")) {
 
-			rbMale.setSelected(true);
-			rbFemale.setSelected(false);
+				rbMale.setSelected(true);
+				rbFemale.setSelected(false);
 
-		} else {
+			} else {
 
-			rbMale.setSelected(false);
-			rbFemale.setSelected(true);
+				rbMale.setSelected(false);
+				rbFemale.setSelected(true);
 
-		} // end of if & else
+			} // end of if & else
 
-		cbYear.setValue(selectStudent.get(0).getLevel());
-		txtBan.setText(selectStudent.get(0).getBan());
-		txtKo.setText(selectStudent.get(0).getKorean());
-		txtEng.setText(selectStudent.get(0).getEnglish());
-		txtMath.setText(selectStudent.get(0).getMath());
-		txtSic.setText(selectStudent.get(0).getScience());
-		txtSoc.setText(selectStudent.get(0).getSocity());
-		txtMusic.setText(selectStudent.get(0).getMusic());
-		txtTotal.setText(selectStudent.get(0).getTotal());
-		txtAvg.setText(selectStudent.get(0).getAvg());
+			cbYear.setValue(selectStudent.get(0).getLevel());
+			txtBan.setText(selectStudent.get(0).getBan());
+			txtKo.setText(selectStudent.get(0).getKorean());
+			txtEng.setText(selectStudent.get(0).getEnglish());
+			txtMath.setText(selectStudent.get(0).getMath());
+			txtSic.setText(selectStudent.get(0).getScience());
+			txtSoc.setText(selectStudent.get(0).getSocity());
+			txtMusic.setText(selectStudent.get(0).getMusic());
+			txtTotal.setText(selectStudent.get(0).getTotal());
+			txtAvg.setText(selectStudent.get(0).getAvg());
 
-		textFieldInitSetting(true, true, true, true, true, true, true, true, true, true, true, true, true);
-		
-		} catch(Exception e2) {
-			
+			textFieldInitSetting(true, true, true, true, true, true, true, true, true, true, true, true, true);
+
+		} catch (Exception e2) {
+
 			buttonInitSetting(false, true, false, true, false, true, true);
 			editDelete = false;
-			
-		}// end of try catch
-		
+
+		} // end of try catch
+
 	}// end of handlerTableViewSelectEvent
 
 	private void handlerButtonDeleteAction(ActionEvent e5) {
@@ -524,31 +530,29 @@ public class ViewController implements Initializable {
 			editMusic.setText(selectStudent.get(0).getMusic());
 			editTotal.setText(selectStudent.get(0).getTotal());
 			editAvg.setText(selectStudent.get(0).getAvg());
-			
+
 			Button btnCal = (Button) formEditDialog.lookup("#btnCal");
 			Button btnFormAdd = (Button) formEditDialog.lookup("#btnFormAdd");
 			Button btnFormCancel = (Button) formEditDialog.lookup("#btnFormCancel");
-			
+
 			btnCal.setOnAction(e1 -> {
-				
+
 				int koreanScore = Integer.parseInt(editKorean.getText());
 				int englishScore = Integer.parseInt(editEnglish.getText());
 				int mathScore = Integer.parseInt(editMath.getText());
 				int sicScore = Integer.parseInt(editSic.getText());
 				int socScore = Integer.parseInt(editSoc.getText());
 				int musicScore = Integer.parseInt(editMusic.getText());
-				
-				int sum = koreanScore + englishScore +
-						mathScore + sicScore +
-						socScore + musicScore;
-				
+
+				int sum = koreanScore + englishScore + mathScore + sicScore + socScore + musicScore;
+
 				editTotal.setText(String.valueOf(sum));
 				editAvg.setText(String.valueOf(sum / 6.0));
-				
+
 			});
-			
+
 			btnFormAdd.setOnAction(e2 -> {
-				
+
 				try {
 
 					if (editTotal.getText().equals("") || editAvg.getText().equals("")) {
@@ -557,12 +561,9 @@ public class ViewController implements Initializable {
 
 					} else {
 
-						Student student = new Student(editName.getText(),
-								editGender.getText(),editYear.getText(), 
-								editBan.getText(), editKorean.getText(),
-								editEnglish.getText(), editMath.getText(),
-								editSic.getText(),editSoc.getText(), 
-								editMusic.getText(),editTotal.getText(), 
+						Student student = new Student(editName.getText(), editGender.getText(), editYear.getText(),
+								editBan.getText(), editKorean.getText(), editEnglish.getText(), editMath.getText(),
+								editSic.getText(), editSoc.getText(), editMusic.getText(), editTotal.getText(),
 								editAvg.getText());
 
 						if (editDelete == true) {
@@ -584,14 +585,12 @@ public class ViewController implements Initializable {
 					// alertWarningDisplay(1, "등록 실패", "합계나 평균을 확인 바랍니다.", e.toString());
 				} // end of try & catch
 			});
-			
-			btnFormCancel.setOnAction(e4-> {
-				
+
+			btnFormCancel.setOnAction(e4 -> {
+
 				dialogStage.close();
-				
+
 			});
-			
-			
 
 			Scene scene = new Scene(formEditDialog);
 			dialogStage.setScene(scene);
@@ -604,35 +603,53 @@ public class ViewController implements Initializable {
 
 		} // end of try & catch
 
+		buttonInitSetting(false, true, false, true, false, true, true);
+
+		textFieldInitSetting(false, false, false, false, false, false, false, false, false, false, false, true, true);
+
+		txtName.setText("");
+		cbYear.setValue("");
+		txtBan.setText("");
+		rbMale.setSelected(false);
+		rbFemale.setSelected(false);
+		txtKo.setText("");
+		txtEng.setText("");
+		txtMath.setText("");
+		txtSic.setText("");
+		txtSoc.setText("");
+		txtMusic.setText("");
+		txtTotal.setText("");
+		txtAvg.setText("");
+
 	}// end of handlerButtonEditAction
-	
+
 	private void handlerPieChartAction(MouseEvent e7) {
-		
+
 		try {
-			
-			if(e7.getClickCount() != 2) {
+
+			if (e7.getClickCount() != 2) {
 				return;
 			}
-			
+
 			Parent pieChart = FXMLLoader.load(getClass().getResource("/view/piechart.fxml"));
 			Stage stage = new Stage(StageStyle.UTILITY);
 			stage.initModality(Modality.WINDOW_MODAL);
 			stage.initOwner(btnOk.getScene().getWindow());
 			stage.setTitle(selectStudent.get(0).getName() + "총점과 평균");
-			
+
 			PieChart chart = (PieChart) pieChart.lookup("#pieChart");
 			Button btnClose = (Button) pieChart.lookup("#btnClose");
-			
+
 			chart.setData(FXCollections.observableArrayList(
-					new PieChart.Data("총점", Double.parseDouble(selectStudent.get(0).getTotal())), 
-					new PieChart.Data("평균", Double.parseDouble(selectStudent.get(0).getAvg()))
-					));
-			
+					new PieChart.Data("총점", Double.parseDouble(selectStudent.get(0).getTotal())),
+					new PieChart.Data("평균", Double.parseDouble(selectStudent.get(0).getAvg()))));
+
 			btnClose.setOnAction(e -> {
-				
+
 				buttonInitSetting(false, true, false, true, false, true, true);
-				
-				textFieldInitSetting(false, false, false, false, false, false, false, false, false, false, false, true, true);
+
+				textFieldInitSetting(false, false, false, false, false, false, false, false, false, false, false, true,
+						true);
 
 				txtName.setText("");
 				cbYear.setValue("");
@@ -647,25 +664,90 @@ public class ViewController implements Initializable {
 				txtMusic.setText("");
 				txtTotal.setText("");
 				txtAvg.setText("");
-				
+
 				editDelete = false;
-				
+
 				stage.close();
-				
+
 			});
-			
+
 			Scene scene = new Scene(pieChart);
 			stage.setScene(scene);
 			stage.show();
-			
-			
+
 		} catch (IOException e) {
-		
+
 			e.printStackTrace();
 		}
-		
+
 	}// end of handlerPieChartAction
-	
+
+	private void handlerBarChartAction(ActionEvent e8) {
+
+		try {
+
+			Parent barChart = FXMLLoader.load(getClass().getResource("/view/barchart.fxml"));
+			Stage stage = new Stage(StageStyle.UTILITY);
+			stage.initModality(Modality.WINDOW_MODAL);
+			stage.initOwner(btnOk.getScene().getWindow());
+			stage.setTitle("Bar Chart");
+
+			BarChart chart = (BarChart) barChart.lookup("#barChart");
+			Button btnClose = (Button) barChart.lookup("#btnClose");
+
+			XYChart.Series seriesKorean = new XYChart.Series();
+			seriesKorean.setName("Korean");
+			ObservableList koreanList = FXCollections.observableArrayList();
+
+			for (int i = 0; i < studentData.size(); i++) {
+				koreanList.add(new XYChart.Data(studentData.get(i).getName(),
+						Integer.parseInt(studentData.get(i).getKorean())));
+
+			} // end of for
+
+			seriesKorean.setData(koreanList);
+			chart.getData().add(seriesKorean);
+			
+			
+
+			btnClose.setOnAction(e1 -> {
+				editDelete = false;
+				stage.close();
+
+				buttonInitSetting(false, true, false, true, false, true, true);
+
+				textFieldInitSetting(false, false, false, false, false, false, false, false, false, false, false, true,
+						true);
+
+				txtName.setText("");
+				cbYear.setValue("");
+				txtBan.setText("");
+				rbMale.setSelected(false);
+				rbFemale.setSelected(false);
+				txtKo.setText("");
+				txtEng.setText("");
+				txtMath.setText("");
+				txtSic.setText("");
+				txtSoc.setText("");
+				txtMusic.setText("");
+				txtTotal.setText("");
+				txtAvg.setText("");
+
+			});
+
+			Scene scene = new Scene(barChart);
+			stage.setScene(scene);
+			stage.setResizable(false);
+			stage.show();
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		} // end of try catch
+
+	}// end of handlerBarChartAction
+
 	// end of Action method
 
 	// handler Method
@@ -685,7 +767,6 @@ public class ViewController implements Initializable {
 		txtAvg.clear();
 
 	}// end of textFieldValueInitSetting
-	
 
 	public void alertWarningDisplay(int type, String title, String headerText, String contentText) {
 
