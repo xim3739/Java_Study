@@ -1,9 +1,12 @@
 package controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.text.ParsePosition;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.application.Platform;
@@ -22,6 +25,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -29,11 +33,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import model.Student;
+import model.StudentVO;
 
 public class ViewController implements Initializable {
 
@@ -78,22 +85,42 @@ public class ViewController implements Initializable {
 	@FXML
 	private Button btnEdit;
 	@FXML
+	private Button btnTotalList;
+	@FXML
 	private ToggleGroup genderGroup;
 	@FXML
 	private RadioButton rbMale;
 	@FXML
 	private RadioButton rbFemale;
 	@FXML
-	private TableView<Student> tableView;
+	private TableView<StudentVO> tableView;
 	@FXML
 	private Button btnBarChart;
+	@FXML
+	private HBox imageBox;
+	@FXML
+	private ImageView imageView;
+	@FXML
+	private Button btnImageFile;
+	@FXML
+	private DatePicker dpDate;
+	@FXML
+	private TextField txtDay;
 
-	ObservableList<Student> studentData;
+	ObservableList<StudentVO> studentData;
 
-	private ObservableList<Student> selectStudent;
+	private ObservableList<StudentVO> selectStudent;
 	private int selectStudentIndex;
 
 	private boolean editDelete = false;
+	private StudentDAO studentDAO;
+
+	private String selectFileName = "";
+	private String localUrl = "";
+	private Image localImage;
+	private File selectedFile = null;
+	private File dirSave = new File("/Users/xim/Developer/image");
+	private File file = null;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -129,9 +156,39 @@ public class ViewController implements Initializable {
 
 		btnBarChart.setOnAction(e8 -> handlerBarChartAction(e8));
 
+		totalList();
+
+		btnTotalList.setOnAction(e9 -> handlerButtonTotalListAction(e9));
+		
+		dpDate.setOnAction(e10 -> handlerDatePickerAction(e10));
+		
+		btnImageFile.setOnAction(e11 -> handlerImageFileAction(e11));
+
 		// button actions
+		imageViewInit();
 
 	}// end of initialize
+	
+	//method
+
+	public void totalList() {
+
+		ArrayList<StudentVO> list = null;
+		StudentVO studentVO = null;
+		StudentDAO studentDAO = new StudentDAO();
+		list = studentDAO.getStudentTotal();
+
+		if (list == null) {
+			alertWarningDisplay(1, "DB List Null Point", "Null Point", "Error");
+			return;
+		}
+
+		for (int i = 0; i < list.size(); i++) {
+			studentVO = list.get(i);
+			studentData.add(studentVO);
+		}
+
+	} // end of totalList
 
 	private void buttonInitSetting(boolean total, boolean avg, boolean init, boolean ok, boolean exit, boolean edit,
 			boolean delete) {
@@ -143,6 +200,8 @@ public class ViewController implements Initializable {
 		btnExit.setDisable(exit);
 		btnEdit.setDisable(edit);
 		btnDelete.setDisable(delete);
+		btnImageFile.setDisable(true);
+		dpDate.setValue(LocalDate.now());
 
 	}// end of buttonInitSetting
 
@@ -247,76 +306,92 @@ public class ViewController implements Initializable {
 			}
 		}));
 
+		TableColumn columnNo = new TableColumn("No");
+		columnNo.setMaxWidth(30);
+		columnNo.setStyle("-fx-alignment: CENTER;");
+		columnNo.setCellValueFactory(new PropertyValueFactory("no"));
+
 		TableColumn columnName = new TableColumn("Name");
-		columnName.setMaxWidth(50);
+		columnName.setMaxWidth(43);
 		columnName.setStyle("-fx-alignment: CENTER;");
 		columnName.setCellValueFactory(new PropertyValueFactory("name"));
 
 		TableColumn columnGender = new TableColumn("Gender");
-		columnGender.setMaxWidth(50);
+		columnGender.setMaxWidth(43);
 		columnGender.setStyle("-fx-alignment: CENTER;");
 		columnGender.setCellValueFactory(new PropertyValueFactory("gender"));
 
 		TableColumn columnGrade = new TableColumn("Level");
-		columnGrade.setMaxWidth(50);
+		columnGrade.setMaxWidth(43);
 		columnGrade.setStyle("-fx-alignment: CENTER;");
 		columnGrade.setCellValueFactory(new PropertyValueFactory("level"));
 
 		TableColumn columnBan = new TableColumn("Ban");
-		columnBan.setMaxWidth(50);
+		columnBan.setMaxWidth(43);
 		columnBan.setStyle("-fx-alignment: CENTER;");
 		columnBan.setCellValueFactory(new PropertyValueFactory("ban"));
 
 		TableColumn columnKorean = new TableColumn("Korean");
-		columnKorean.setMaxWidth(50);
+		columnKorean.setMaxWidth(43);
 		columnKorean.setStyle("-fx-alignment: CENTER;");
 		columnKorean.setCellValueFactory(new PropertyValueFactory("korean"));
 
 		TableColumn columnEnglish = new TableColumn("English");
-		columnEnglish.setMaxWidth(50);
+		columnEnglish.setMaxWidth(43);
 		columnEnglish.setStyle("-fx-alignment: CENTER;");
 		columnEnglish.setCellValueFactory(new PropertyValueFactory("english"));
 
 		TableColumn columnMath = new TableColumn("Math");
-		columnMath.setMaxWidth(50);
+		columnMath.setMaxWidth(43);
 		columnMath.setStyle("-fx-alignment: CENTER;");
 		columnMath.setCellValueFactory(new PropertyValueFactory("math"));
 
 		TableColumn columnScience = new TableColumn("Science");
-		columnScience.setMaxWidth(50);
+		columnScience.setMaxWidth(43);
 		columnScience.setStyle("-fx-alignment: CENTER;");
-		columnScience.setCellValueFactory(new PropertyValueFactory("science"));
+		columnScience.setCellValueFactory(new PropertyValueFactory("sic"));
 
 		TableColumn columnSocity = new TableColumn("Socity");
-		columnSocity.setMaxWidth(50);
+		columnSocity.setMaxWidth(43);
 		columnSocity.setStyle("-fx-alignment: CENTER;");
-		columnSocity.setCellValueFactory(new PropertyValueFactory("socity"));
+		columnSocity.setCellValueFactory(new PropertyValueFactory("soc"));
 
 		TableColumn columnMusic = new TableColumn("Music");
-		columnMusic.setMaxWidth(50);
+		columnMusic.setMaxWidth(43);
 		columnMusic.setStyle("-fx-alignment: CENTER;");
 		columnMusic.setCellValueFactory(new PropertyValueFactory("music"));
 
 		TableColumn columnTotal = new TableColumn("Total");
-		columnTotal.setMaxWidth(50);
+		columnTotal.setMaxWidth(43);
 		columnTotal.setStyle("-fx-alignment: CENTER;");
 		columnTotal.setCellValueFactory(new PropertyValueFactory("total"));
 
 		TableColumn columnAvg = new TableColumn("Avg");
-		columnAvg.setMaxWidth(50);
+		columnAvg.setMaxWidth(43);
 		columnAvg.setStyle("-fx-alignment: CENTER;");
 		columnAvg.setCellValueFactory(new PropertyValueFactory("avg"));
 
+		TableColumn columnRegister = new TableColumn("DATE");
+		columnRegister.setMaxWidth(90);
+		columnRegister.setStyle("-fx-alignment: CENTER;");
+		columnRegister.setCellValueFactory(new PropertyValueFactory("register"));
+
+		TableColumn columnFileName = new TableColumn("IMAGE");
+		columnFileName.setMaxWidth(120);
+		columnFileName.setStyle("-fx-alignment: CENTER;");
+		columnFileName.setCellValueFactory(new PropertyValueFactory("filename"));
+
 		tableView.setItems(studentData);
-		tableView.getColumns().addAll(columnName, columnGender, columnGrade, columnBan, columnKorean, columnEnglish,
-				columnMath, columnScience, columnSocity, columnMusic, columnTotal, columnAvg);
+		tableView.getColumns().addAll(columnNo, columnName, columnGender, columnGrade, columnBan, columnKorean,
+				columnEnglish, columnMath, columnScience, columnSocity, columnMusic, columnTotal, columnAvg,
+				columnRegister, columnFileName);
 
 	}// end of tableViewSetting
 
 	private void handlerButtonTotalAction(ActionEvent e) {
 
 		try {
-
+			
 			if ((Integer.parseInt(txtKo.getText()) <= 100) && (Integer.parseInt(txtEng.getText()) <= 100)
 					&& (Integer.parseInt(txtMath.getText()) <= 100) && (Integer.parseInt(txtSic.getText()) <= 100)
 					&& (Integer.parseInt(txtSoc.getText()) <= 100) && (Integer.parseInt(txtMusic.getText()) <= 100)) {
@@ -340,7 +415,8 @@ public class ViewController implements Initializable {
 			alertWarningDisplay(1, "합계 실패", "계산 오류", e2.toString());
 
 		}
-	}
+		
+	} // end of handlerButtonTotalAction
 
 	private void handlerButtonAvgAction(ActionEvent e1) {
 
@@ -364,26 +440,49 @@ public class ViewController implements Initializable {
 
 		try {
 
+			File dirMake = new File(dirSave.getAbsolutePath());
+
+			if (!dirMake.exists()) {
+				dirMake.mkdir();
+			}
+
+			String fileName = imageSave(selectedFile);
+
 			if (txtTotal.getText().equals("") || txtAvg.getText().equals("")) {
 
 				throw new Exception();
 
 			} else {
 
-				Student student = new Student(txtName.getText(),
+				StudentVO svo = new StudentVO(txtName.getText(),
 						(genderGroup.getSelectedToggle().getUserData()).toString(),
-						cbYear.getSelectionModel().getSelectedItem(), txtBan.getText(), txtKo.getText(),
-						txtEng.getText(), txtMath.getText(), txtSic.getText(), txtSoc.getText(), txtMusic.getText(),
-						txtTotal.getText(), txtAvg.getText());
+						cbYear.getSelectionModel().getSelectedItem(), txtBan.getText(),
+						Integer.parseInt(txtKo.getText().trim()), Integer.parseInt(txtEng.getText().trim()),
+						Integer.parseInt(txtMath.getText().trim()), Integer.parseInt(txtSic.getText().trim()),
+						Integer.parseInt(txtSoc.getText().trim()), Integer.parseInt(txtMusic.getText().trim()),
+						Integer.parseInt(txtTotal.getText().trim()), Double.parseDouble(txtAvg.getText().trim()), null,
+						fileName);
 
 				if (editDelete == true) {
 					studentData.remove(selectStudentIndex);
-					studentData.add(selectStudentIndex, student);
+					studentData.add(selectStudentIndex, svo);
 					editDelete = false;
 
 				} else {
-
-					studentData.add(student);
+					studentDAO = new StudentDAO();
+					int count = studentDAO.getStudentregiste(svo);
+					if (count != 0) {
+						
+						studentData.removeAll(studentData);
+						totalList();
+						imageViewInit();
+						
+					} else {
+						
+						throw new Exception("");
+					}
+					
+					studentData.add(svo);
 
 				} // end of if & else
 
@@ -405,14 +504,27 @@ public class ViewController implements Initializable {
 
 	private void handlerButtonSearchAction(ActionEvent e4) {
 
-		for (Student studnet : studentData) {
-			if (txtSearch.getText().equals(studnet.getName())) {
-				tableView.getSelectionModel().select(studnet);
-				return;
+		try {
+
+			ArrayList<StudentVO> list = new ArrayList<StudentVO>();
+			StudentDAO studentDAO = new StudentDAO();
+			list = studentDAO.getStudentCheck(txtSearch.getText());
+
+			if (list == null) {
+				throw new Exception("검색오류");
 			}
+
+			studentData.removeAll(studentData);
+			for (StudentVO svo : list) {
+				studentData.add(svo);
+			}
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			alertWarningDisplay(1, "검색 결과", "정확한 이름을 입력해주세요.", "데이터를 찾을 수 없습니다.");
+			e.printStackTrace();
 		}
 
-		alertWarningDisplay(1, "검색 결과", "정확한 이름을 입력해주세요.", "데이터를 찾을 수 없습니다.");
 	}// end of handlerButtonSearchAction
 
 	private void handlerTableViewSelectEvent(MouseEvent e6) {
@@ -438,16 +550,14 @@ public class ViewController implements Initializable {
 
 			} // end of if & else
 
-			cbYear.setValue(selectStudent.get(0).getLevel());
-			txtBan.setText(selectStudent.get(0).getBan());
-			txtKo.setText(selectStudent.get(0).getKorean());
-			txtEng.setText(selectStudent.get(0).getEnglish());
-			txtMath.setText(selectStudent.get(0).getMath());
-			txtSic.setText(selectStudent.get(0).getScience());
-			txtSoc.setText(selectStudent.get(0).getSocity());
-			txtMusic.setText(selectStudent.get(0).getMusic());
-			txtTotal.setText(selectStudent.get(0).getTotal());
-			txtAvg.setText(selectStudent.get(0).getAvg());
+			txtKo.setText(String.valueOf(selectStudent.get(0).getKorean()));
+			txtEng.setText(String.valueOf(selectStudent.get(0).getEnglish()));
+			txtMath.setText(String.valueOf(selectStudent.get(0).getMath()));
+			txtSic.setText(String.valueOf(selectStudent.get(0).getSic()));
+			txtSoc.setText(String.valueOf(selectStudent.get(0).getSoc()));
+			txtMusic.setText(String.valueOf(selectStudent.get(0).getMusic()));
+			txtTotal.setText(String.valueOf(selectStudent.get(0).getTotal()));
+			txtAvg.setText(String.valueOf(selectStudent.get(0).getAvg()));
 
 			textFieldInitSetting(true, true, true, true, true, true, true, true, true, true, true, true, true);
 
@@ -461,8 +571,19 @@ public class ViewController implements Initializable {
 	}// end of handlerTableViewSelectEvent
 
 	private void handlerButtonDeleteAction(ActionEvent e5) {
+		try {
 
-		studentData.remove(selectStudentIndex);
+			StudentDAO studentDAO = new StudentDAO();
+
+			studentDAO.getStudentDelete(selectStudent.get(0).getNo());
+
+			studentData.removeAll(studentData);
+
+			totalList();
+
+		} catch (Exception e) {
+			alertWarningDisplay(1, "error", "error", e.toString());
+		}
 
 		buttonInitSetting(false, true, false, true, false, true, true);
 
@@ -522,14 +643,14 @@ public class ViewController implements Initializable {
 			editYear.setText(selectStudent.get(0).getLevel());
 			editBan.setText(selectStudent.get(0).getBan());
 			editGender.setText(selectStudent.get(0).getGender());
-			editKorean.setText(selectStudent.get(0).getKorean());
-			editEnglish.setText(selectStudent.get(0).getEnglish());
-			editMath.setText(selectStudent.get(0).getMath());
-			editSic.setText(selectStudent.get(0).getScience());
-			editSoc.setText(selectStudent.get(0).getSocity());
-			editMusic.setText(selectStudent.get(0).getMusic());
-			editTotal.setText(selectStudent.get(0).getTotal());
-			editAvg.setText(selectStudent.get(0).getAvg());
+			editKorean.setText(String.valueOf(selectStudent.get(0).getKorean()));
+			editEnglish.setText(String.valueOf(selectStudent.get(0).getEnglish()));
+			editMath.setText(String.valueOf(selectStudent.get(0).getMath()));
+			editSic.setText(String.valueOf(selectStudent.get(0).getSic()));
+			editSoc.setText(String.valueOf(selectStudent.get(0).getSoc()));
+			editMusic.setText(String.valueOf(selectStudent.get(0).getMusic()));
+			editTotal.setText(String.valueOf(selectStudent.get(0).getTotal()));
+			editAvg.setText(String.valueOf(selectStudent.get(0).getAvg()));
 
 			Button btnCal = (Button) formEditDialog.lookup("#btnCal");
 			Button btnFormAdd = (Button) formEditDialog.lookup("#btnFormAdd");
@@ -561,18 +682,29 @@ public class ViewController implements Initializable {
 
 					} else {
 
-						Student student = new Student(editName.getText(), editGender.getText(), editYear.getText(),
-								editBan.getText(), editKorean.getText(), editEnglish.getText(), editMath.getText(),
-								editSic.getText(), editSoc.getText(), editMusic.getText(), editTotal.getText(),
-								editAvg.getText());
+						StudentVO svo = new StudentVO(selectStudent.get(0).getNo(), editName.getText(),
+								editYear.getText(), editBan.getText(), editGender.getText(),
+								Integer.parseInt(editKorean.getText().trim()),
+								Integer.parseInt(editEnglish.getText().trim()),
+								Integer.parseInt(editMath.getText().trim()), Integer.parseInt(editSic.getText().trim()),
+								Integer.parseInt(editSoc.getText().trim()),
+								Integer.parseInt(editMusic.getText().trim()),
+								Integer.parseInt(editTotal.getText().trim()),
+								Double.parseDouble(editAvg.getText().trim()));
 
-						if (editDelete == true) {
+						StudentDAO studentDAO = new StudentDAO();
+						StudentVO studentVO = studentDAO.getStudentUpdate(svo, selectStudent.get(0).getNo());
+
+						if (editDelete == true && studentVO != null) {
+
 							studentData.remove(selectStudentIndex);
-							studentData.add(selectStudentIndex, student);
+							studentData.add(selectStudentIndex, svo);
 							editDelete = false;
 
 						} else {
+
 							throw new Exception("수정 등록 오류");
+
 						} // end of if & else
 
 						buttonInitSetting(false, true, false, true, false, true, true);
@@ -641,8 +773,8 @@ public class ViewController implements Initializable {
 			Button btnClose = (Button) pieChart.lookup("#btnClose");
 
 			chart.setData(FXCollections.observableArrayList(
-					new PieChart.Data("총점", Double.parseDouble(selectStudent.get(0).getTotal())),
-					new PieChart.Data("평균", Double.parseDouble(selectStudent.get(0).getAvg()))));
+					new PieChart.Data("총점", (double) (selectStudent.get(0).getTotal())),
+					new PieChart.Data("평균", selectStudent.get(0).getAvg())));
 
 			btnClose.setOnAction(e -> {
 
@@ -700,15 +832,12 @@ public class ViewController implements Initializable {
 			ObservableList koreanList = FXCollections.observableArrayList();
 
 			for (int i = 0; i < studentData.size(); i++) {
-				koreanList.add(new XYChart.Data(studentData.get(i).getName(),
-						Integer.parseInt(studentData.get(i).getKorean())));
+				koreanList.add(new XYChart.Data(studentData.get(i).getName(), studentData.get(i).getKorean()));
 
 			} // end of for
 
 			seriesKorean.setData(koreanList);
 			chart.getData().add(seriesKorean);
-			
-			
 
 			btnClose.setOnAction(e1 -> {
 				editDelete = false;
@@ -748,10 +877,63 @@ public class ViewController implements Initializable {
 
 	}// end of handlerBarChartAction
 
-	// end of Action method
+	private void handlerButtonTotalListAction(ActionEvent e9) {
+		try {
 
-	// handler Method
+			studentData.removeAll(studentData);
 
+			totalList();
+
+		} catch (Exception e) {
+			alertWarningDisplay(1, "error", "error", e.toString());
+			e.printStackTrace();
+		}
+
+	} // end of handlerButtonTotalListAction
+	
+	private void handlerDatePickerAction(ActionEvent e10) {
+		
+		LocalDate date = dpDate.getValue();
+		txtDay.setText("" + date);
+		
+	} // end of handlerDatePickerAction
+
+	private void handlerImageFileAction(ActionEvent e11) {
+		
+		
+		
+	} // end of handlerImageFileAction
+	
+	public boolean imageDelete(String fileName) {
+		
+		boolean result = false;
+		
+		try {
+			
+			File fileDelete = new File(dirSave.getAbsolutePath() + "\\" + fileName);
+			
+			if(fileDelete.exists() && fileDelete.isFile()) {
+				
+				result = fileDelete.delete();
+				imageViewInit();
+				
+			}
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			result = false;
+			
+		}
+		
+		return result;
+		
+	} // end of imageDelete
+	
+	// end of handelrAction method
+	
+	//initSetting method
+	
 	private void textFieldValueInitSetting() {
 
 		txtName.clear();
@@ -821,9 +1003,24 @@ public class ViewController implements Initializable {
 
 	}// end of textFieldInitSetting
 
-	public void handlerBtnAvgActoion(ActionEvent event) {
+	private void imageViewInit() {
 
-	}// end of handlerBtnAvgAction
+		localUrl = "/image/MainImage.jpeg";
+		localImage = new Image(localUrl, false);
+		imageView.setImage(localImage);
+
+	} // end of imageViewInit
+
+	private String imageSave(File selectedFile) {
+
+		return null;
+		
+	} // end of imageSave
+
+	public void handlerBtnTotalAction() {
+
+	}
 
 	// end of args Method
+
 }

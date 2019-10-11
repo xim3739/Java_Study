@@ -1,6 +1,7 @@
 package model;
 
 public class Student {
+	private String no;
 	private String name;
 	private String gender;
 	private String level;
@@ -18,6 +19,24 @@ public class Student {
 	
 	}
 
+	public Student(String no, String name, String gender, String level, String ban, String korean, String english,
+			String math, String science, String socity, String music, String total, String avg) {
+		super();
+		this.no = no;
+		this.name = name;
+		this.gender = gender;
+		this.level = level;
+		this.ban = ban;
+		this.korean = korean;
+		this.english = english;
+		this.math = math;
+		this.science = science;
+		this.socity = socity;
+		this.music = music;
+		this.total = total;
+		this.avg = avg;
+	}
+
 	public Student(String name, String gender, String level, String ban, String korean, String english, String math,
 			String science, String socity, String music, String total, String avg) {
 		super();
@@ -33,6 +52,14 @@ public class Student {
 		this.music = music;
 		this.total = total;
 		this.avg = avg;
+	}
+
+	public String getNo() {
+		return no;
+	}
+
+	public void setNo(String no) {
+		this.no = no;
 	}
 
 	public String getName() {
