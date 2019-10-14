@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="210.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login_Controller">
+   <children>
+      <TextField fx:id="txt_id" layoutX="114.0" layoutY="87.0" />
+      <PasswordField fx:id="txt_pw" layoutX="114.0" layoutY="117.0" />
+      <Label layoutX="46.0" layoutY="121.0" text="비밀번호" />
+      <Label layoutX="46.0" layoutY="91.0" text="사원번호" />
+      <Button fx:id="btn_cancel" layoutX="184.0" layoutY="156.0" mnemonicParsing="false" text="닫기" />
+      <Button fx:id="btn_login" layoutX="45.0" layoutY="156.0" mnemonicParsing="false" text="로그인" />
+       <Button fx:id="btn_input_emp" layoutX="110.0" layoutY="156.0" mnemonicParsing="false" text="사원가입" />
+      <Separator layoutX="32.0" layoutY="66.0" prefHeight="15.0" prefWidth="236.0" />
+      <Button fx:id="btn_select_idpw" layoutX="234.0" layoutY="156.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="0.0" text="?" />
+      <ImageView fitHeight="56.0" fitWidth="222.0" layoutX="39.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../bin/image/s.png" />
+         </image>
+      </ImageView>
+     
+   </children>
+</AnchorPane>

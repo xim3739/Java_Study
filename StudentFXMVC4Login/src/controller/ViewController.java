@@ -1,7 +1,12 @@
 package controller;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.text.ParsePosition;
@@ -37,6 +42,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -159,17 +166,17 @@ public class ViewController implements Initializable {
 		totalList();
 
 		btnTotalList.setOnAction(e9 -> handlerButtonTotalListAction(e9));
-		
+
 		dpDate.setOnAction(e10 -> handlerDatePickerAction(e10));
-		
+
 		btnImageFile.setOnAction(e11 -> handlerImageFileAction(e11));
 
 		// button actions
 		imageViewInit();
 
 	}// end of initialize
-	
-	//method
+
+	// method
 
 	public void totalList() {
 
@@ -391,7 +398,7 @@ public class ViewController implements Initializable {
 	private void handlerButtonTotalAction(ActionEvent e) {
 
 		try {
-			
+
 			if ((Integer.parseInt(txtKo.getText()) <= 100) && (Integer.parseInt(txtEng.getText()) <= 100)
 					&& (Integer.parseInt(txtMath.getText()) <= 100) && (Integer.parseInt(txtSic.getText()) <= 100)
 					&& (Integer.parseInt(txtSoc.getText()) <= 100) && (Integer.parseInt(txtMusic.getText()) <= 100)) {
@@ -415,7 +422,7 @@ public class ViewController implements Initializable {
 			alertWarningDisplay(1, "합계 실패", "계산 오류", e2.toString());
 
 		}
-		
+
 	} // end of handlerButtonTotalAction
 
 	private void handlerButtonAvgAction(ActionEvent e1) {
@@ -425,6 +432,8 @@ public class ViewController implements Initializable {
 		buttonInitSetting(true, true, false, false, false, true, true);
 
 		textFieldInitSetting(true, true, true, true, true, true, true, true, true, true, true, true, true);
+		
+		btnImageFile.setDisable(false);
 
 	}// end of handlerButtonAvgAction
 
@@ -447,6 +456,7 @@ public class ViewController implements Initializable {
 			}
 
 			String fileName = imageSave(selectedFile);
+			System.out.println(fileName.toString());
 
 			if (txtTotal.getText().equals("") || txtAvg.getText().equals("")) {
 
@@ -472,16 +482,16 @@ public class ViewController implements Initializable {
 					studentDAO = new StudentDAO();
 					int count = studentDAO.getStudentregiste(svo);
 					if (count != 0) {
-						
+
 						studentData.removeAll(studentData);
 						totalList();
 						imageViewInit();
-						
+
 					} else {
-						
+
 						throw new Exception("");
 					}
-					
+
 					studentData.add(svo);
 
 				} // end of if & else
@@ -530,6 +540,7 @@ public class ViewController implements Initializable {
 	private void handlerTableViewSelectEvent(MouseEvent e6) {
 
 		try {
+			
 			editDelete = true;
 			buttonInitSetting(true, true, true, true, false, false, false);
 
@@ -558,7 +569,16 @@ public class ViewController implements Initializable {
 			txtMusic.setText(String.valueOf(selectStudent.get(0).getMusic()));
 			txtTotal.setText(String.valueOf(selectStudent.get(0).getTotal()));
 			txtAvg.setText(String.valueOf(selectStudent.get(0).getAvg()));
-
+			
+			String fileName = selectStudent.get(0).getFilename();
+			String fileUrl = null;
+			fileUrl = dirSave + fileName;
+			localImage = new Image(fileUrl, false);
+			imageView.setImage(localImage);
+			imageView.setFitHeight(250);
+			imageView.setFitWidth(230);
+			btnOk.setDisable(false);
+			
 			textFieldInitSetting(true, true, true, true, true, true, true, true, true, true, true, true, true);
 
 		} catch (Exception e2) {
@@ -890,50 +910,47 @@ public class ViewController implements Initializable {
 		}
 
 	} // end of handlerButtonTotalListAction
-	
+
 	private void handlerDatePickerAction(ActionEvent e10) {
-		
+
 		LocalDate date = dpDate.getValue();
 		txtDay.setText("" + date);
-		
+
 	} // end of handlerDatePickerAction
 
 	private void handlerImageFileAction(ActionEvent e11) {
-		
-		
-		
-	} // end of handlerImageFileAction
-	
-	public boolean imageDelete(String fileName) {
-		
-		boolean result = false;
-		
+
+		// 이미지 파일 선택 창
+
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.getExtensionFilters().addAll(new ExtensionFilter("Image File", "*.png", "*.jpg", "*.gif"));
 		try {
-			
-			File fileDelete = new File(dirSave.getAbsolutePath() + "\\" + fileName);
-			
-			if(fileDelete.exists() && fileDelete.isFile()) {
-				
-				result = fileDelete.delete();
-				imageViewInit();
-				
+			selectedFile = fileChooser.showOpenDialog(btnOk.getScene().getWindow());
+			if (selectedFile != null) {
+				// 이미지 파일 경로
+				localUrl = selectedFile.toURI().toURL().toString();
 			}
-			
-		} catch (Exception e) {
-			
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-			result = false;
-			
 		}
 		
-		return result;
-		
-	} // end of imageDelete
-	
+		localImage = new Image(localUrl, false);
+		imageView.setImage(localImage);
+		imageView.setFitHeight(250);
+		imageView.setFitWidth(230);
+		btnOk.setDisable(false);
+
+		if (selectedFile != null) {
+			selectFileName = selectedFile.getName();
+		}
+
+	} // end of handlerImageFileAction
+
 	// end of handelrAction method
-	
-	//initSetting method
-	
+
+	// initSetting method
+
 	private void textFieldValueInitSetting() {
 
 		txtName.clear();
@@ -1011,11 +1028,79 @@ public class ViewController implements Initializable {
 
 	} // end of imageViewInit
 
-	private String imageSave(File selectedFile) {
-
-		return null;
+	private String imageSave(File file) {
 		
+		BufferedInputStream bis = null;
+		BufferedOutputStream bos = null;
+
+		int data = -1;
+		String fileName = null;
+
+		try {
+			fileName = "student" + System.currentTimeMillis() + "_" + file.getName();
+			bis = new BufferedInputStream(new FileInputStream(file));
+
+			bos = new BufferedOutputStream(new FileOutputStream(dirSave.getAbsoluteFile() + "\\" + fileName));
+
+			while ((data = bis.read()) != -1) {
+
+				bos.write(data);
+				bos.flush();
+
+			}
+			
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		} finally {
+
+			try {
+
+				if (bos != null) {
+					bos.close();
+				}
+
+				if (bis != null) {
+					bis.close();
+				}
+
+			} catch (Exception e) {
+
+				e.printStackTrace();
+
+			}
+		}
+
+		return fileName;
+
 	} // end of imageSave
+
+	public boolean imageDelete(String fileName) {
+
+		boolean result = false;
+
+		try {
+
+			File fileDelete = new File(dirSave.getAbsolutePath() + "\\" + fileName);
+
+			if (fileDelete.exists() && fileDelete.isFile()) {
+
+				result = fileDelete.delete();
+				imageViewInit();
+
+			}
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+			result = false;
+
+		}
+
+		return result;
+
+	} // end of imageDelete
 
 	public void handlerBtnTotalAction() {
 

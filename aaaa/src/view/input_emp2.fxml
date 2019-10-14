@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ComboBox?>
+
+<AnchorPane prefHeight="380.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Input_Controller2">
+	<children>
+      <ImageView fitHeight="91.0" fitWidth="468.0" layoutX="5.0" layoutY="4.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../bin/image/innisfree.png" />
+         </image>
+      </ImageView>
+		<Label layoutX="29.0" layoutY="34.0" text="직원 아이디/비번 찾기" textFill="#466e17" />
+		<Label layoutX="286.0" layoutY="114.0" text="매장 비밀번호" />
+		<Label layoutX="54.0" layoutY="331.0" text="사원번호" />
+		<Label layoutX="312.0" layoutY="331.0" text="비밀번호" />
+		<Label layoutX="66.0" layoutY="164.0" text="이름" />
+		<Label layoutX="55.0" layoutY="208.0" text="전화번호" />
+		<Label layoutX="56.0" layoutY="289.0" text="검색결과" textFill="#466e17" />
+		<Label layoutX="300.0" layoutY="164.0" text="생년월일" />
+		<Label layoutX="50.0" layoutY="114.0" text="매장 코드" />
+
+		<Separator layoutX="161.0" layoutY="39.0" prefHeight="5.0" prefWidth="361.0" />
+		<Separator layoutX="136.0" layoutY="296.0" prefHeight="5.0" prefWidth="380.0" />
+
+		<TextField fx:id="txt_stNo" alignment="CENTER" layoutX="129.0" layoutY="110.0" prefHeight="23.0" prefWidth="115.0" promptText="매장코드" text="00123" />
+		<TextField fx:id="txt_eName" alignment="CENTER" layoutX="131.0" layoutY="160.0" prefWidth="115.0" promptText="이름입력" />
+		<TextField fx:id="txt_age" alignment="CENTER" layoutX="385.0" layoutY="160.0" prefHeight="23.0" prefWidth="115.0" promptText="ex)980220" />
+		<TextField fx:id="txt_phone" alignment="CENTER" layoutX="132.0" layoutY="205.0" prefWidth="115.0" promptText="'-' 제외하고 입력" />
+		<TextField fx:id="txt_e_no" alignment="CENTER" disable="true" editable="false" layoutX="131.0" layoutY="328.0" prefWidth="115.0" />
+		<TextField fx:id="txt_pw1" alignment="CENTER" disable="true" editable="false" layoutX="382.0" layoutY="327.0" prefWidth="115.0" />
+		<PasswordField fx:id="txt_st_pw" alignment="CENTER" layoutX="384.0" layoutY="110.0" prefHeight="15.0" prefWidth="115.0" promptText="매장비밀번호" />
+
+		<Button fx:id="btn_select" layoutX="224.0" layoutY="247.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="40.0" text="검색" />
+		<Button fx:id="btn_cancel" layoutX="282.0" layoutY="247.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="40.0" text="취소" />
+		<Label layoutX="238.0" layoutY="60.0" text="* 정보를 찾기위한 필수입력 항목을 입력해 주십시오." textFill="#5a92bc" />
+		<Label layoutX="102.0" layoutY="113.0" text="*" textFill="#5a92bc" />
+		<Label layoutX="103.0" layoutY="164.0" text="*" textFill="#5a92bc" />
+		<Label layoutX="105.0" layoutY="208.0" text="*" textFill="#5a92bc" />
+		<Label layoutX="362.0" layoutY="331.0" textFill="#5a92bc" />
+		<Label layoutX="104.0" layoutY="331.0" textFill="#5a92bc" />
+		<Label layoutX="364.0" layoutY="164.0" text="*" textFill="#5a92bc" />
+		<Label layoutX="366.0" layoutY="113.0" text="*" textFill="#5a92bc" />
+
+	</children>
+</AnchorPane>

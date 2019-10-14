@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ComboBox?>
+
+<AnchorPane prefHeight="380.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Input_Controller">
+	<children>
+		<Label layoutX="30.0" layoutY="31.0" text="00123매장 직원 가입" />
+		<Label layoutX="121.0" layoutY="326.0" text="매장 비밀번호" />
+		<Label layoutX="48.0" layoutY="203.0" text="사원번호" />
+		<Label layoutX="306.0" layoutY="203.0" text="비밀번호" />
+		<Label layoutX="62.0" layoutY="135.0" text="직급" />
+		<Label layoutX="318.0" layoutY="99.0" text="이름" />
+		<Label layoutX="48.0" layoutY="168.0" text="전화번호" />
+		<Label layoutX="46.0" layoutY="281.0" text="비밀번호 입력" />
+		<Label layoutX="306.0" layoutY="168.0" text="생년월일" />
+		<Label layoutX="299.0" layoutY="135.0" text="담당 m사번" />
+		<Label layoutX="46.0" layoutY="100.0" text="매장 코드" />
+		<Label layoutX="179.0" layoutY="248.0" text="입사일" />
+
+		<Separator layoutX="143.0" layoutY="36.0" prefHeight="5.0" prefWidth="380.0" />
+		<Separator layoutX="142.0" layoutY="286.0" prefHeight="5.0" prefWidth="380.0" />
+
+		<TextField fx:id="txt_stNo" alignment="CENTER" layoutX="125.0" layoutY="96.0" prefHeight="23.0" prefWidth="115.0" promptText="매장코드" text="00123" />
+		<TextField fx:id="txt_mag" alignment="CENTER" layoutX="377.0" layoutY="130.0" prefWidth="115.0" promptText="'일반직원' 만 입력" />
+		<TextField fx:id="txt_eName" alignment="CENTER" layoutX="378.0" layoutY="95.0" prefWidth="115.0" promptText="이름입력" />
+		<TextField fx:id="txt_age" alignment="CENTER" layoutX="377.0" layoutY="164.0" prefHeight="23.0" prefWidth="115.0" promptText="ex)980220" />
+		<TextField fx:id="txt_phone" alignment="CENTER" layoutX="125.0" layoutY="165.0" prefWidth="115.0" promptText="'-' 제외하고 입력" />
+		<TextField fx:id="txt_e_no" alignment="CENTER" layoutX="125.0" layoutY="200.0" prefWidth="115.0" />
+		<ComboBox fx:id="cb_spots" layoutX="125.0" layoutY="131.0" prefHeight="23.0" prefWidth="115.0" />
+		<PasswordField fx:id="txt_pw" alignment="CENTER" layoutX="376.0" layoutY="199.0" prefWidth="115.0" promptText="문자,숫자만 사용" />
+		<DatePicker fx:id="date_sales_date" layoutX="231.0" layoutY="244.0" prefHeight="23.0" prefWidth="150.0" />
+		<PasswordField fx:id="txt_st_pw" alignment="CENTER" layoutX="219.0" layoutY="322.0" prefHeight="15.0" prefWidth="115.0" promptText="매장비밀번호" />
+
+		<Button fx:id="btn_insert" layoutX="340.0" layoutY="321.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="40.0" text="가입" />
+		<Button fx:id="btn_cancel" layoutX="385.0" layoutY="321.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="40.0" text="취소" />
+      <Label layoutX="238.0" layoutY="53.0" text="* 사원가입을 위한 필수입력 항목을 입력해 주십시오." textFill="#5a92bc" />
+      <Label layoutX="98.0" layoutY="99.0" text="*" textFill="#5a92bc" />
+      <Label layoutX="356.0" layoutY="99.0" text="*" textFill="#5a92bc" />
+      <Label layoutX="98.0" layoutY="168.0" text="*" textFill="#5a92bc" />
+      <Label layoutX="98.0" layoutY="135.0" text="*" textFill="#5a92bc" />
+      <Label layoutX="217.0" layoutY="248.0" text="*" textFill="#5a92bc" />
+      <Label layoutX="356.0" layoutY="203.0" text="*" textFill="#5a92bc" />
+      <Label layoutX="98.0" layoutY="203.0" text="*" textFill="#5a92bc" />
+      <Label layoutX="356.0" layoutY="168.0" text="*" textFill="#5a92bc" />
+      <Label layoutX="201.0" layoutY="325.0" text="*" textFill="#5a92bc" />
+      <ImageView fitHeight="91.0" fitWidth="468.0" layoutX="15.0" layoutY="14.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../bin/image/innisfree.png" />
+         </image>
+      </ImageView>
+
+	</children>
+</AnchorPane>

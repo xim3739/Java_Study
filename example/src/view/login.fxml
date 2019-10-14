@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Label layoutX="101.0" layoutY="14.0" style="-fx-font-size: 35;" text="WELLCOME" />
+      <Label layoutX="80.0" layoutY="111.0" style="-fx-font-size: 20;" text="ID" />
+      <Label layoutX="44.0" layoutY="160.0" style="-fx-font-size: 20;" text="Password" />
+      <TextField fx:id="tfId" layoutX="163.0" layoutY="110.0" />
+      <PasswordField fx:id="tfPassword" layoutX="163.0" layoutY="159.0" />
+      <Button fx:id="btLogin" layoutX="141.0" layoutY="224.0" mnemonicParsing="false" text="Login" />
+      <Button fx:id="btSignUp" layoutX="297.0" layoutY="224.0" mnemonicParsing="false" text="Sign Up" />
+      <Button fx:id="btCancle" layoutX="216.0" layoutY="224.0" mnemonicParsing="false" text="Cancle" />
+   </children>
+</AnchorPane>

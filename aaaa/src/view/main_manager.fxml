@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="570.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Main_m_Controller">
+	<children>
+		<TabPane layoutY="70.0" prefHeight="500.0" prefWidth="650.0" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="500.0" tabMinWidth="80.0">
+			<tabs>
+				<Tab fx:id="tab_input_sales" text="판매실적 입력">
+					<content>
+						<AnchorPane prefHeight="200.0" prefWidth="200.0">
+							<children>
+								<ImageView fitHeight="163.0" fitWidth="636.0" layoutX="15.0" layoutY="149.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../bin/image/innisfree.png" />
+									</image>
+								</ImageView>
+								<Label layoutX="89.0" layoutY="67.0" text="사번" />
+								<Label layoutX="336.0" layoutY="67.0" text="매장코드" />
+								<Label layoutX="367.0" layoutY="246.0" text="상품개수" />
+								<Label blendMode="MULTIPLY" layoutX="364.0" layoutY="193.0" text="상품금액" />
+								<Label layoutX="79.0" layoutY="296.0" text="특이사항" />
+								<Button fx:id="is_btn_sales" layoutX="249.0" layoutY="338.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="65.0" text="판매" />
+								<TextField fx:id="is_txt_eNo" alignment="CENTER" disable="true" layoutX="136.0" layoutY="63.0" prefWidth="138.0" />
+								<TextField fx:id="is_txt_stNo" alignment="CENTER" disable="true" layoutX="401.0" layoutY="63.0" />
+								<TextField fx:id="is_txt_Memo" layoutX="138.0" layoutY="292.0" prefHeight="23.0" prefWidth="187.0" />
+								<TextField fx:id="is_txt_proPrice" blendMode="MULTIPLY" editable="false" layoutX="432.0" layoutY="189.0" onMousePressed="#is_ac_proprice_c" prefWidth="115.0" />
+								<TextField fx:id="is_txt_ac_price" editable="false" layoutX="435.0" layoutY="425.0" onMousePressed="#is_ac_txt_acPrice" prefWidth="115.0" />
+								<TextField fx:id="is_txt_ac_num" editable="false" layoutX="169.0" layoutY="425.0" onMousePressed="#is_ac_txt_acnum" prefWidth="115.0" />
+								<Label layoutX="80.0" layoutY="429.0" text="누적 판매개수" textFill="#c46350" />
+								<Label layoutX="344.0" layoutY="429.0" text="누적 판매금액" textFill="#c46350" />
+								<Label layoutX="79.0" layoutY="246.0" text="판매시간" />
+								<TextField fx:id="is_txt_SalesTime" blendMode="MULTIPLY" layoutX="159.0" layoutY="241.0" onMousePressed="#is_ac_timetxt" prefWidth="115.0" promptText="hh:mm" />
+								<TextField fx:id="is_txt_proName" blendMode="MULTIPLY" editable="false" layoutX="138.0" layoutY="191.0" onMousePressed="#is_ac_proname_c" prefWidth="138.0" />
+								<Label layoutX="167.0" layoutY="131.0" text="상품 코드번호" />
+								<Label layoutX="559.0" layoutY="245.0" text="개" />
+								<Label layoutX="85.0" layoutY="195.0" text="상품명" />
+								<Separator layoutX="80.0" layoutY="99.0" prefHeight="12.0" prefWidth="500.0" />
+								<Separator layoutX="80.0" layoutY="402.0" prefHeight="12.0" prefWidth="500.0" />
+								<Button fx:id="is_btn_reset" layoutX="332.0" layoutY="338.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="65.0" text="초기화" />
+								<Label layoutX="558.0" layoutY="193.0" text="원" />
+								<Label layoutX="558.0" layoutY="429.0" text="원" textFill="#c46350" />
+								<Label layoutX="291.0" layoutY="429.0" text="개" textFill="#c46350" />
+								<Label layoutX="336.0" layoutY="29.0" text="판매일자" />
+								<DatePicker fx:id="is_salesDate" layoutX="400.0" layoutY="25.0" prefHeight="23.0" prefWidth="140.0" />
+								<Button fx:id="is_btn_select" layoutX="418.0" layoutY="127.0" mnemonicParsing="false" onMousePressed="#ac_select" prefHeight="23.0" prefWidth="40.0" text="선택" />
+								<ComboBox fx:id="is_combo_ProNo" layoutX="266.0" layoutY="127.0" prefWidth="138.0" />
+								<ComboBox fx:id="is_combo_ProNum" blendMode="MULTIPLY" layoutX="431.0" layoutY="241.0" prefHeight="23.0" prefWidth="115.0" />
+								<Label layoutX="559.0" layoutY="294.0" text="원" />
+								<TextField fx:id="is_txt_salesPrice" editable="false" layoutX="431.0" layoutY="290.0" onMousePressed="#is_ac_txt_sum" prefWidth="115.0" />
+								<Label layoutX="367.0" layoutY="294.0" text="판매금액" />
+								<Label layoutX="246.0" layoutY="131.0" text="*" textFill="#5a92bc" />
+								<Label layoutX="344.0" layoutY="381.0" text="* 판매등록을 위한 필수입력 항목을 입력해 주십시오." textFill="#5a92bc" />
+								<Label layoutX="416.0" layoutY="245.0" text="*" textFill="#5a92bc" />
+								<TextField fx:id="is_txt_eName" alignment="CENTER" disable="true" layoutX="89.0" layoutY="25.0" prefHeight="23.0" prefWidth="104.0" />
+								<Label layoutX="198.0" layoutY="29.0" text="님 반갑습니다^^*" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="tab_select_sales" text="판매실적 조회">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<ImageView fitHeight="163.0" fitWidth="636.0" layoutX="15.0" layoutY="149.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../bin/image/innisfree.png" />
+									</image>
+								</ImageView>
+								<TableView fx:id="ss_tv_all" blendMode="MULTIPLY" layoutX="15.0" layoutY="107.0" prefHeight="334.0" prefWidth="621.0">
+									<columns>
+										<TableColumn fx:id="ss_tv_time" prefWidth="65.0" text="판매시간" />
+										<TableColumn fx:id="ss_tv_proNo" prefWidth="100" text="상품코드" />
+										<TableColumn fx:id="ss_tv_proNum" prefWidth="65.0" text="상품개수" />
+										<TableColumn fx:id="ss_tv_proPrice" prefWidth="100" text="상품금액" />
+										<TableColumn fx:id="ss_tv_acNum" prefWidth="65.0" text="누적개수" />
+										<TableColumn fx:id="ss_tv_acPrice" prefWidth="100" text="누적금액" />
+										<TableColumn fx:id="ss_tv_memo" prefWidth="120" text="특이사항" />
+										<TableColumn fx:id="ss_tv_date" prefWidth="100" text="판매날짜" />
+									</columns>
+								</TableView>
+								<TextField fx:id="ss_txt_proName" layoutX="139.0" layoutY="61.0" prefHeight="23.0" prefWidth="137.0" promptText="코드번호 키워드" />
+								<Label layoutX="79.0" layoutY="65.0" text="상품코드" />
+								<Label layoutX="347.0" layoutY="65.0" text="특이사항" />
+								<Button fx:id="ss_btn_select_pname" layoutX="287.0" layoutY="61.0" mnemonicParsing="false" text="검색" />
+								<Button fx:id="ss_btn_select_memo" layoutX="551.0" layoutY="61.0" mnemonicParsing="false" text="검색" />
+								<Button fx:id="ss_btn_delete" layoutX="526.0" layoutY="25.0" mnemonicParsing="false" prefWidth="65.0" text="선택삭제" />
+								<TextField fx:id="ss_txt_Memo" layoutX="408.0" layoutY="61.0" prefHeight="23.0" prefWidth="137.0" promptText="특이사항 키워드" />
+								<DatePicker fx:id="ss_salesDate" editable="false" layoutX="139.0" layoutY="25.0" prefHeight="23.0" prefWidth="191.0" promptText="sysdate" />
+								<Label layoutX="79.0" layoutY="29.0" text="현재날짜" />
+								<Button fx:id="ss_btn_select_date" layoutX="337.0" layoutY="25.0" mnemonicParsing="false" text="검색" />
+								<Button fx:id="ss_btn_select_all" layoutX="388.0" layoutY="25.0" mnemonicParsing="false" text="전체" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="상품관리">
+					<content>
+						<AnchorPane maxHeight="471.0" maxWidth="650.0" minHeight="471.0" prefHeight="471.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+							<children>
+								<ImageView fitHeight="163.0" fitWidth="636.0" layoutX="15.0" layoutY="149.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../bin/image/innisfree.png" />
+									</image>
+								</ImageView>
+								<Label layoutX="55.0" layoutY="139.0" text="상품명" />
+								<TextField fx:id="txt_proNo" layoutX="118.0" layoutY="89.0" prefHeight="23.0" prefWidth="140.0" promptText="01001" />
+								<TextField fx:id="txt_proName" layoutX="118.0" layoutY="135.0" prefHeight="23.0" prefWidth="140.0" promptText="더 그린티 씨드 세럼" />
+								<TextField fx:id="txt_proPrice" alignment="CENTER_RIGHT" blendMode="MULTIPLY" layoutX="115.0" layoutY="181.0" prefHeight="23.0" prefWidth="125.0" promptText="7,000" />
+								<Label layoutX="48.0" layoutY="185.0" text="상품금액" />
+								<Label layoutX="115.0" layoutY="24.0" text="상품 등록">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<Button fx:id="btn_proInput" blendMode="MULTIPLY" layoutX="75.0" layoutY="229.0" maxHeight="26.0" minHeight="26.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="상품추가" />
+
+								<Button fx:id="btn_reset" blendMode="MULTIPLY" layoutX="168.0" layoutY="229.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="초기화" />
+								<Label layoutX="253.0" layoutY="185.0" text="원" />
+								<TableView fx:id="tv_all" blendMode="MULTIPLY" layoutX="325.0" layoutY="89.0" prefHeight="357.0" prefWidth="314.0">
+									<columns>
+										<TableColumn fx:id="tv_proNo" prefWidth="97.0" text="상품코드번호" />
+										<TableColumn fx:id="tv_proName" prefWidth="128.0" text="상품명" />
+										<TableColumn fx:id="tv_proPrice" prefWidth="83.0" text="상품금액" />
+									</columns>
+								</TableView>
+								<Button fx:id="btn_edit" blendMode="MULTIPLY" layoutX="75.0" layoutY="268.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="상품수정" />
+								<Button fx:id="btn_delete" layoutX="168.0" layoutY="268.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="상품삭제" />
+								<Label layoutX="34.0" layoutY="93.0" text="상품 코드번호" />
+								<Label layoutX="27.0" layoutY="347.0" text="상품 코드번호" textFill="#802f7bdb">
+									<font>
+										<Font name="Haettenschweiler" size="12.0" />
+									</font>
+								</Label>
+								<ComboBox fx:id="cb_proNO" layoutX="113.0" layoutY="343.0" prefHeight="23.0" prefWidth="140.0" />
+								<Button fx:id="btn_select" layoutX="80.0" layoutY="396.0" mnemonicParsing="false" onMousePressed="#p_ac_select" prefHeight="26.0" prefWidth="70.0" text="선택조회" />
+								<Button fx:id="btn_select_all" layoutX="168.0" layoutY="396.0" mnemonicParsing="false" onMousePressed="#p_ac_select_all" prefHeight="26.0" prefWidth="70.0" text="전체조회" />
+								<Separator layoutX="47.0" layoutY="61.0" prefWidth="200.0" />
+								<Separator layoutX="295.0" layoutY="12.0" orientation="VERTICAL" prefHeight="446.0" prefWidth="16.0" />
+								<Separator layoutX="372.0" layoutY="61.0" prefWidth="200.0" />
+								<Label layoutX="440.0" layoutY="24.0" text="상품 조회" textFill="#802f7b">
+									<font>
+										<Font size="15.0" />
+									</font>
+								</Label>
+								<Separator layoutX="47.0" layoutY="301.0" prefWidth="200.0" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="tab_info_my" text="내정보">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<ImageView fitHeight="163.0" fitWidth="636.0" layoutX="15.0" layoutY="149.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../bin/image/innisfree.png" />
+									</image>
+								</ImageView>
+								<TextField fx:id="im_txt_phone" layoutX="442.0" layoutY="138.0" prefWidth="115.0" />
+								<TextField fx:id="im_txt_stNo" blendMode="MULTIPLY" disable="true" layoutX="172.0" layoutY="242.0" prefWidth="115.0" />
+								<TextField fx:id="im_txt_mNo" disable="true" layoutX="172.0" layoutY="187.0" prefWidth="115.0" />
+								<TextField fx:id="im_txt_age" layoutX="172.0" layoutY="138.0" prefWidth="115.0" />
+								<TextField fx:id="im_txt_eNo" disable="true" editable="false" layoutX="441.0" layoutY="90.0" prefWidth="115.0" />
+								<Button fx:id="im_btn_edit" layoutX="474.0" layoutY="380.0" mnemonicParsing="false" prefWidth="65.0" text="수정" />
+								<ComboBox fx:id="im_cb_spot" blendMode="MULTIPLY" disable="true" editable="true" layoutX="442.0" layoutY="242.0" prefHeight="23.0" prefWidth="115.0" />
+								<PasswordField fx:id="im_txt_pw" layoutX="442.0" layoutY="187.0" prefWidth="115.0" />
+								<Label layoutX="365.0" layoutY="191.0" text="비밀번호" />
+								<TextField fx:id="im_txt_eName" layoutX="171.0" layoutY="90.0" prefWidth="115.0" />
+								<Label layoutX="102.0" layoutY="246.0" text="매장코드" />
+								<Label layoutX="351.0" layoutY="142.0" text="핸드폰 번호" />
+								<Label layoutX="371.0" layoutY="246.0" text="직급" />
+								<Label layoutX="94.0" layoutY="191.0" text="매니저 사번" />
+								<Label layoutX="102.0" layoutY="142.0" text="생년월일" />
+								<Label layoutX="376.0" layoutY="94.0" text="사번" />
+								<Label layoutX="111.0" layoutY="94.0" text="이름 " />
+								<Label fx:id="label_select" layoutX="62.0" layoutY="45.0" text="내 정보 조회" />
+								<Separator layoutX="157.0" layoutY="33.0" prefHeight="38.0" prefWidth="448.0" />
+								<Label layoutX="121.0" layoutY="361.0" text="매니저 사번" />
+								<Label layoutX="127.0" layoutY="406.0" text="비밀번호" />
+								<PasswordField fx:id="im_txt_m_pw" layoutX="223.0" layoutY="402.0" prefWidth="115.0" />
+								<TextField fx:id="im_txt_m_id" layoutX="224.0" layoutY="357.0" prefWidth="115.0" />
+								<Separator layoutX="165.0" layoutY="299.0" prefHeight="38.0" prefWidth="448.0" />
+								<Label layoutX="64.0" layoutY="310.0" text="매니저 권한" />
+								<Button fx:id="im_btn_m_edit" layoutX="389.0" layoutY="380.0" mnemonicParsing="false" prefWidth="65.0" text="권한접속" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="월급 조회">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<ImageView fitHeight="163.0" fitWidth="636.0" layoutX="15.0" layoutY="149.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../bin/image/innisfree.png" />
+									</image>
+								</ImageView>
+								<TextField fx:id="sal_txt_eNo" disable="true" editable="false" layoutX="176.0" layoutY="67.0" prefHeight="23.0" prefWidth="115.0" />
+								<Label layoutX="113.0" layoutY="71.0" text="사원번호" />
+								<Separator layoutX="132.0" layoutY="14.0" prefHeight="38.0" prefWidth="460.0" />
+								<Label layoutX="349.0" layoutY="71.0" text="비밀번호" />
+								<Button fx:id="sal_btn_select_sal" layoutX="246.0" layoutY="106.0" mnemonicParsing="false" text="월급조회" />
+								<PasswordField fx:id="sal_txt_pw" layoutX="407.0" layoutY="67.0" prefHeight="23.0" prefWidth="115.0" />
+								<Label layoutX="43.0" layoutY="26.0" text="월급 조회" />
+								<TextField fx:id="sal_txt_turesal" alignment="CENTER" disable="true" layoutX="264.0" layoutY="404.0" prefHeight="32.0" prefWidth="125.0">
+									<font>
+										<Font size="16.0" />
+									</font>
+								</TextField>
+								<Label layoutX="383.0" layoutY="321.0" text="원" />
+								<Label layoutX="200.0" layoutY="321.0" text="원" />
+								<Label layoutX="395.0" layoutY="413.0" text="원" />
+								<Button fx:id="sal_btn_reset" layoutX="510.0" layoutY="408.0" mnemonicParsing="false" text="초기화" />
+								<Button fx:id="sal_btn_sum" layoutX="436.0" layoutY="408.0" mnemonicParsing="false" prefWidth="52.0" text="계산" />
+								<Label layoutX="160.0" layoutY="413.0" text="예상 실 수령급여" />
+								<TextField fx:id="sal_txt_tax" alignment="CENTER" disable="true" layoutX="295.0" layoutY="317.0" prefWidth="85.0" />
+								<Label layoutX="258.0" layoutY="321.0" text="세금" />
+								<Label layoutX="29.0" layoutY="147.0" text="월급조회 시스템" />
+								<Label layoutX="43.0" layoutY="321.0" text="기본 원금" />
+								<TextField fx:id="sal_txt_sal" alignment="CENTER" disable="true" layoutX="109.0" layoutY="317.0" prefHeight="23.0" prefWidth="85.0" />
+								<Separator layoutX="136.0" layoutY="136.0" prefHeight="38.0" prefWidth="460.0" />
+								<Separator layoutX="135.0" layoutY="367.0" prefHeight="27.0" prefWidth="460.0" />
+								<Label layoutX="29.0" layoutY="373.0" text="예상 실 수령급여" />
+								<Label layoutX="555.0" layoutY="219.0" text="원" />
+								<Label layoutX="555.0" layoutY="187.0" text="원" />
+								<Label layoutX="291.0" layoutY="219.0" text="개" />
+								<Label layoutX="292.0" layoutY="187.0" text="개" />
+								<Label layoutX="377.0" layoutY="187.0" text="누적 판매금액" />
+								<TextField fx:id="sal_txt_acPrice" alignment="CENTER_RIGHT" disable="true" layoutX="460.0" layoutY="181.0" prefHeight="23.0" prefWidth="89.0" />
+								<Label layoutX="377.0" layoutY="219.0" text="목표 판매금액" />
+								<Label layoutX="371.0" layoutY="252.0" text="판매금액 성과율" textFill="#c46350" />
+								<TextField fx:id="sal_txt_gPrice" alignment="CENTER_RIGHT" blendMode="MULTIPLY" disable="true" editable="false" layoutX="462.0" layoutY="215.0" prefHeight="23.0" prefWidth="83.0" />
+								<TextField fx:id="sal_txt_ratePrice" alignment="CENTER_RIGHT" blendMode="MULTIPLY" disable="true" layoutX="470.0" layoutY="247.0" onMousePressed="#sal_ac_txt_priceRate" prefHeight="10.0" prefWidth="72.0" />
+								<Label layoutX="557.0" layoutY="252.0" text="\%" textFill="#c46350" />
+								<Label layoutX="292.0" layoutY="251.0" text="\%" textFill="#c46350" />
+								<TextField fx:id="sal_txt_rateNum" alignment="CENTER_RIGHT" blendMode="MULTIPLY" disable="true" layoutX="210.0" layoutY="248.0" onMousePressed="#sal_ac_txt_numRate" prefHeight="23.0" prefWidth="72.0" />
+								<TextField fx:id="sal_txt_gNum" alignment="CENTER_RIGHT" blendMode="MULTIPLY" disable="true" editable="false" layoutX="196.0" layoutY="215.0" prefHeight="23.0" prefWidth="86.0" />
+								<Label layoutX="104.0" layoutY="251.0" text="판매개수 성과율" textFill="#c46350" />
+								<Label layoutX="110.0" layoutY="219.0" text="목표 판매개수" />
+								<TextField fx:id="sal_txt_acNum" alignment="CENTER_RIGHT" blendMode="MULTIPLY" disable="true" layoutX="197.0" layoutY="181.0" prefHeight="23.0" prefWidth="86.0" />
+								<Label layoutX="110.0" layoutY="187.0" text="누적 판매개수" />
+								<Label layoutX="438.0" layoutY="321.0" text="인센티브" />
+								<TextField fx:id="sal_txt_incentive" alignment="CENTER" disable="true" layoutX="493.0" layoutY="317.0" prefWidth="85.0" />
+								<Label layoutX="581.0" layoutY="321.0" text="원" />
+								<Button fx:id="sal_btn_select_ok" layoutX="334.0" layoutY="106.0" mnemonicParsing="false" text="조회완료" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab fx:id="tab_close" text="마감">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+							<children>
+								<ImageView fitHeight="163.0" fitWidth="636.0" layoutX="15.0" layoutY="149.0" opacity="0.11" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../bin/image/innisfree.png" />
+									</image>
+								</ImageView>
+								<DatePicker fx:id="c_dp_closedate" blendMode="MULTIPLY" editable="false" layoutX="276.0" layoutY="233.0" promptText="sysdate" />
+								<Label layoutX="210.0" layoutY="236.0" text="마감날짜" />
+								<TextField fx:id="c_txt_stNo" blendMode="MULTIPLY" editable="false" layoutX="279.0" layoutY="187.0" />
+								<TextField fx:id="c_txt_eNo" editable="false" layoutX="275.0" layoutY="144.0" />
+								<Label layoutX="210.0" layoutY="190.0" text="매장코드" />
+								<Label layoutX="228.0" layoutY="149.0" text="사번" />
+								<Label fx:id="c_label" layoutX="196.0" layoutY="317.0" text="*^^오늘도 수고하셨습니다^^*" />
+								<Button fx:id="btn_close" layoutX="390.0" layoutY="313.0" maxWidth="65.0" mnemonicParsing="false" prefWidth="65.0" text="마감" />
+								<Label layoutX="228.0" layoutY="107.0" text="이름" />
+								<TextField fx:id="c_txt_name" editable="false" layoutX="275.0" layoutY="102.0" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+		<ImageView fitHeight="59.0" fitWidth="222.0" layoutX="201.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@../../bin/image/s.png" />
+			</image>
+		</ImageView>
+	</children>
+</AnchorPane>
