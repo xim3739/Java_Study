@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import util.DBUtil;
 
-public class ClientDVO {
+public class ClientDAO {
 
 	public void insertClientDB(ClientVO cvo) {
 
@@ -18,6 +18,7 @@ public class ClientDVO {
 		PreparedStatement pstmt = null;
 
 		try {
+			
 			con = DBUtil.getConnection();
 
 			pstmt = con.prepareStatement(dml);
@@ -46,13 +47,18 @@ public class ClientDVO {
 	} // end of insertClientDB
 	
 	public ArrayList<ClientVO> getClientCheck(ClientVO cvo) throws Exception {
+		
 		String dml = "select * from clientdb where id = ?";
+		
 		ArrayList<ClientVO> clientList = new ArrayList<ClientVO>();
+		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
+		
 		ClientVO clientVo = null;
 		String name2 = cvo.getId();
+		
 		try {
 			con = DBUtil.getConnection();
 			pstmt = con.prepareStatement(dml);

@@ -17,7 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import model.ClientDVO;
+import model.ClientDAO;
 import model.ClientVO;
 import util.AlertMessage;
 
@@ -34,7 +34,7 @@ public class LoginController implements Initializable {
 	@FXML
 	private Button btCancle;
 
-	private ClientDVO clientDVO;
+	private ClientDAO clientDVO;
 	private ArrayList<ClientVO> clientList = new ArrayList<ClientVO>();
 	private boolean flagCheck = true;
 
@@ -78,7 +78,7 @@ public class LoginController implements Initializable {
 				mainStage.show();
 				
 			} catch (Exception e1) {
-
+				e1.printStackTrace();
 				AlertMessage.alertWarningDisplay(1, "Main Load Error", "Falied load main window", "Sorry try again");
 				
 				flagCheck = true;
@@ -132,7 +132,7 @@ public class LoginController implements Initializable {
 						ClientVO cvo = new ClientVO(tfDialogId.getText().trim(), tfDialogPassword.getText().trim(),
 								tfDialogName.getText().trim(), tfDialogPhone.getText().trim());
 
-						clientDVO = new ClientDVO();
+						clientDVO = new ClientDAO();
 
 						clientList = clientDVO.getClientCheck(cvo);
 
@@ -187,7 +187,7 @@ public class LoginController implements Initializable {
 
 	private void initSetting() {
 
-		clientDVO = new ClientDVO();
+		clientDVO = new ClientDAO();
 
 		clientList = clientDVO.getClientInfo();
 

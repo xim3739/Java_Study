@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" layoutX="25.0" layoutY="25.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label text="물품" />
+            <TextField id="tfAddGoods" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="25.0" layoutY="125.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Label text="가격" />
+            <TextField id="tfAddPrice" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="25.0" layoutY="220.0" prefHeight="80.0" prefWidth="200.0" spacing="30.0">
+         <children>
+            <Button id="btAddGoods" mnemonicParsing="false" text="등록" />
+            <Button id="btAddCancle" mnemonicParsing="false" text="취소" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

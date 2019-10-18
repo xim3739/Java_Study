@@ -1,13 +1,15 @@
 package util;
 
+import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
+import javafx.scene.control.DialogEvent;
 import javafx.scene.control.Alert.AlertType;
 
 public class AlertMessage {
 	
+	public static Alert alert = null;
+	
 	public static void alertWarningDisplay(int type, String title, String headerText, String contentText) {
-
-		Alert alert = null;
 
 		switch (type) {
 
@@ -36,8 +38,9 @@ public class AlertMessage {
 		alert.setContentText(headerText + "\n" + contentText);
 		alert.setResizable(false);
 		alert.showAndWait();
-
+	
 	}// end of alertWarningDisplay
+	
 }
 
 

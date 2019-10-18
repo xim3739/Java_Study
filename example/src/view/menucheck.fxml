@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView id="tableView" layoutX="50.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextField id="tfGoods" layoutX="19.0" layoutY="40.0" prefHeight="27.0" prefWidth="148.0" promptText="메뉴를 검색하세요" />
+      <Button id="btSearch" layoutX="173.0" layoutY="40.0" mnemonicParsing="false" text="검색" />
+      <HBox alignment="CENTER" layoutX="19.0" layoutY="306.0" prefHeight="80.0" spacing="20.0">
+         <children>
+            <Button id="btAdd" mnemonicParsing="false" text="등록" />
+            <Button id="btEdit" mnemonicParsing="false" text="수정" />
+            <Button id="btEditDelete" mnemonicParsing="false" text="삭제" />
+            <Button id="btBack" mnemonicParsing="false" text="뒤로가기" />
+         </children>
+      </HBox>
+      <Button id="btMenuRefresh" layoutX="223.0" layoutY="40.0" mnemonicParsing="false" text="새로고침" />
+   </children>
+</AnchorPane>

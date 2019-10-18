@@ -571,13 +571,16 @@ public class ViewController implements Initializable {
 			txtAvg.setText(String.valueOf(selectStudent.get(0).getAvg()));
 			
 			String fileName = selectStudent.get(0).getFilename();
-			String fileUrl = null;
-			fileUrl = dirSave + fileName;
-			localImage = new Image(fileUrl, false);
-			imageView.setImage(localImage);
-			imageView.setFitHeight(250);
-			imageView.setFitWidth(230);
-			btnOk.setDisable(false);
+			selectedFile = new File("/Users/xim/Developer/image/" + fileName);
+			if(selectedFile != null) {
+				localUrl = selectedFile.toURI().toString();
+				localImage = new Image(localUrl, false);
+				imageView.setImage(localImage);
+				imageView.setFitHeight(250);
+				imageView.setFitWidth(230);
+				btnOk.setDisable(false);
+			}
+			
 			
 			textFieldInitSetting(true, true, true, true, true, true, true, true, true, true, true, true, true);
 
@@ -1040,7 +1043,7 @@ public class ViewController implements Initializable {
 			fileName = "student" + System.currentTimeMillis() + "_" + file.getName();
 			bis = new BufferedInputStream(new FileInputStream(file));
 
-			bos = new BufferedOutputStream(new FileOutputStream(dirSave.getAbsoluteFile() + "\\" + fileName));
+			bos = new BufferedOutputStream(new FileOutputStream(dirSave.getAbsoluteFile() + "//" + fileName));
 
 			while ((data = bis.read()) != -1) {
 

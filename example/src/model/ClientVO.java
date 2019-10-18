@@ -1,6 +1,7 @@
 package model;
 
 public class ClientVO {
+	
 	private String id;
 	private String password;
 	private String name;

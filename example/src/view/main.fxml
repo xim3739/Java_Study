@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
   <tabs>
     <Tab text="매출 관리">
       <content>
@@ -16,26 +16,25 @@
                <children>
                   <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="14.0" prefWidth="570.0">
                      <children>
-                        <TextField prefWidth="150.0" />
-                        <Button mnemonicParsing="false" text="검색">
+                        <TextField fx:id="tfGoodsName" prefWidth="150.0" promptText="품목 이름" />
+                        <Button fx:id="btSearch" mnemonicParsing="false" text="검색">
                            <HBox.margin>
                               <Insets left="5.0" />
                            </HBox.margin>
                         </Button>
-                        <Button mnemonicParsing="false" text="전체">
+                        <Button fx:id="btTotalSearch" mnemonicParsing="false" text="전체">
                            <HBox.margin>
                               <Insets left="5.0" />
                            </HBox.margin>
                         </Button>
-                        <DatePicker editable="false">
+                        <DatePicker fx:id="datePicker" editable="false">
                            <HBox.margin>
                               <Insets left="5.0" />
                            </HBox.margin>
                         </DatePicker>
                      </children>
                   </HBox>
-                  <TableView layoutX="15.0" layoutY="50.0" prefHeight="215.0" prefWidth="285.0" />
-                  <BarChart layoutX="312.0" layoutY="50.0" prefHeight="311.0" prefWidth="275.0" title="매출">
+                  <BarChart fx:id="barChart" layoutX="520.0" layoutY="50.0" prefHeight="311.0" prefWidth="465.0" title="매출">
                     <xAxis>
                       <CategoryAxis side="BOTTOM" />
                     </xAxis>
@@ -43,34 +42,33 @@
                       <NumberAxis side="LEFT" />
                     </yAxis>
                   </BarChart>
-                  <VBox alignment="CENTER" layoutX="15.0" layoutY="281.0" prefWidth="130.0" spacing="12.0">
+                  <VBox alignment="CENTER" layoutX="76.0" layoutY="278.0" prefWidth="130.0" spacing="12.0" />
+                  <VBox alignment="CENTER" layoutX="215.0" layoutY="281.0" prefWidth="130.0" spacing="12.0" />
+                  <HBox alignment="CENTER" layoutX="15.0" layoutY="271.0" prefHeight="80.0" prefWidth="480.0" spacing="30.0">
                      <children>
-                        <Button mnemonicParsing="false" text="매출 등록">
+                        <Button fx:id="btSaleAdd" mnemonicParsing="false" text="매출 등록">
                            <font>
-                              <Font size="14.0" />
+                              <Font name="Arial" size="17.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" text="매출 수정">
+                        <Button fx:id="btSaleEdit" mnemonicParsing="false" text="매출 수정">
                            <font>
-                              <Font size="14.0" />
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btSaleDelete" mnemonicParsing="false" text="매출 삭제">
+                           <font>
+                              <Font name="Arial" size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btMenuCheck" mnemonicParsing="false" text="메뉴 확인">
+                           <font>
+                              <Font name="Arial" size="17.0" />
                            </font>
                         </Button>
                      </children>
-                  </VBox>
-                  <VBox alignment="CENTER" layoutX="169.0" layoutY="281.0" prefWidth="130.0" spacing="12.0">
-                     <children>
-                        <Button mnemonicParsing="false" text="메뉴 등록">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
-                        <Button mnemonicParsing="false" text="메뉴 수정">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </VBox>
+                  </HBox>
+                  <TableView fx:id="tableView" layoutX="15.0" layoutY="60.0" prefHeight="200.0" prefWidth="477.0" />
                </children></AnchorPane>
       </content>
     </Tab>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" layoutX="36.0" layoutY="14.0" spacing="30.0">
+         <children>
+            <DatePicker id="dpSaleDate" />
+            <ComboBox id="cbGoodsList" prefWidth="150.0" />
+            <Label text="개수" />
+            <TextField id="tfSaleCount" prefWidth="50.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="23.0" layoutY="54.0" spacing="15.0">
+         <children>
+            <Label text="가격" />
+            <TextField id="tfSalePrice" editable="false" prefWidth="90.0" />
+            <Label text="총 판매 금액" />
+            <TextField id="tfSaleTotal" prefWidth="120.0" />
+            <Label text="비고" />
+            <TextField id="tfSaleComents" prefWidth="125.0" />
+         </children>
+      </HBox>
+      <TableView id="tableView" layoutX="23.0" layoutY="97.0" prefHeight="200.0" prefWidth="535.0" />
+      <HBox alignment="CENTER" layoutX="159.0" layoutY="312.0" spacing="50.0">
+         <children>
+            <Button id="btSaleAdd" mnemonicParsing="false" text="등록" />
+            <Button id="btSaleDelete" mnemonicParsing="false" text="항목 삭제" />
+            <Button id="btSaleBack" mnemonicParsing="false" text="취소" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
