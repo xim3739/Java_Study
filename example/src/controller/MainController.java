@@ -25,6 +25,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -41,11 +42,7 @@ public class MainController implements Initializable {
 	@FXML
 	private Button btSearch;
 	@FXML
-	private Button btTotalSearch;
-	@FXML
 	private Button btSaleAdd;
-	@FXML
-	private Button btSaleEdit;
 	@FXML
 	private Button btSaleDelete;
 	@FXML
@@ -56,45 +53,125 @@ public class MainController implements Initializable {
 	private TableView<SaleVO> tableView;
 	// @FXML private BarChart<X, Y> barChart;
 
-	// saleVO veriable
+	/********************
+	 * 기능 : 필요한 saleVO 모델의 변수 2019 10 월 18 일 작성자 : 심재현
+	 * 
+	 */
 	private ObservableList<SaleVO> saleVOList = FXCollections.observableArrayList();
+	private ObservableList<SaleVO> addSaleVOList = FXCollections.observableArrayList();
 	private ObservableList<SaleVO> selectSaleVOList = FXCollections.observableArrayList();
-	private SaleVO selectSaleVO = null;
+	private int selectSaleIndex = 0;
+	private ArrayList<SaleVO> selectSaleVO = new ArrayList<SaleVO>();
+	private ArrayList<SaleVO> searchDateSaleVO = new ArrayList<SaleVO>();
+	private SaleVO selectSale = null;
 	private SaleDAO saleDAO = null;
 	private SaleVO saveSaleVO = null;;
-	private LocalDate localDate = null;
 	private String saveGoodsString = null;
-	private int savePrice = 0;
-	private int saveTotalPrice = 0;
 
-	// goodsVO veriable
+	/*******************************
+	 * 기능 : 필요한 goodsVO의 변수들 2019 10 월 18 일 작성자 : 심재현
+	 * 
+	 */
 	private ArrayList<GoodsVO> goodsList = new ArrayList<GoodsVO>();
 	private ObservableList<GoodsVO> goodsVOList = FXCollections.observableArrayList();
-	private ObservableList<String> goodsNameList = null;
+	private ObservableList<String> goodsNameList = FXCollections.observableArrayList();;
 	private GoodsDAO goodsDVO = null;;
 	private String editGoods = null;;
-
-	// goodsVO selected tableView
 	private ObservableList<GoodsVO> selectMenuEditGoodsVOList = FXCollections.observableArrayList();
 	private GoodsVO selectMenuEditGoodsVO = null;
+
+	/**********************************
+	 * 기능 : 필요한 그 외의 변수들 2019 10 월 18 일 작성자 : 심재현
+	 * 
+	 */
+	private LocalDate localDate = null;
+	private int savePrice = 0;
+	private int saveTotalPrice = 0;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		loadTotalSaleDB();
+		tableViewSetting();
+
+		// loadTotalSaleDB();
 
 		loadTotalGoodsDB();
 
-		btSaleAdd.setOnAction(e -> handlerButtonSaleAddAction(e));
+		tableView.setOnMousePressed(e1 -> {
 
-		btSaleEdit.setOnAction(e -> handlerButtonSaleEditAction(e));
+			selectSaleVOList = tableView.getSelectionModel().getSelectedItems();
+			selectSale = tableView.getSelectionModel().getSelectedItem();
+			selectSaleIndex = tableView.getSelectionModel().getSelectedIndex();
+			System.out.println(selectSaleIndex);
+
+		}); // end of tableView select
+
+		btSearch.setOnAction(e -> handlerButtonSaleSearchAction(e));
+
+		btSaleAdd.setOnAction(e -> handlerButtonSaleAddAction(e));
 
 		btSaleDelete.setOnAction(e -> handlerButtonSaleDelete(e));
 
 		btMenuCheck.setOnAction(e -> handlerButtonMenuCheck(e));
 
+		datePicker.setOnAction(e -> handlerDatePicker(e));
+
 	} // end of initialize
 
+	private void handlerButtonSaleSearchAction(ActionEvent e) {
+		try {
+			String searchGoods = tfGoodsName.getText().trim();
+			localDate = datePicker.getValue();
+			String localDateStr = localDate.getYear() + "-" + localDate.getMonthValue() + "-"
+					+ localDate.getDayOfMonth();
+
+			ArrayList<SaleVO> list = new ArrayList<SaleVO>();
+
+			saleDAO = new SaleDAO();
+			list = saleDAO.searchGoodsVO(searchGoods, localDateStr);
+
+			saleVOList = FXCollections.observableArrayList(list);
+			tableView.setItems(saleVOList);
+
+		} catch (Exception e1) {
+
+			e1.printStackTrace();
+			AlertMessage.alertWarningDisplay(1, "오류", "오류입니다.", "다시 확인 해 주세요.");
+
+		}
+	}
+
+	/*************************
+	 * 기능 : datePicker의 날짜를 선택하면 선택한 날짜의 SaleVO를 가져와서 테이블뷰에 표시한다. 2019 10 월 18 일
+	 * handlerDatePicker 메소드 작성자 : 심재현
+	 * 
+	 */
+	private void handlerDatePicker(ActionEvent e) {
+		try {
+			localDate = datePicker.getValue();
+			String localDateStr = localDate.getYear() + "-" + localDate.getMonthValue() + "-"
+					+ localDate.getDayOfMonth();
+			saleDAO = new SaleDAO();
+
+			searchDateSaleVO = saleDAO.getListToDate(localDateStr);
+
+			ObservableList<SaleVO> list = FXCollections.observableArrayList(searchDateSaleVO);
+
+			tableView.setItems(list);
+
+		} catch (Exception e1) {
+
+			e1.printStackTrace();
+			AlertMessage.alertWarningDisplay(1, "오류", "오류입니다.", "다시 확인 해 주세요.");
+
+		}
+	} // end of handlerDatePicker
+
+	/**************************
+	 * 기능 : 등록 버튼을 누르면 등록 창을 연다. 2019 10월 18 일 handlerButtonSaleAddAction 메소드 작성자 :
+	 * 심재현
+	 * 
+	 */
 	private void handlerButtonSaleAddAction(ActionEvent e) {
 
 		try {
@@ -123,13 +200,20 @@ public class MainController implements Initializable {
 			ArrayList<String> saveGoodsName = new ArrayList<String>();
 
 			for (int i = 0; i < goodsList.size(); i++) {
+
 				saveGoodsName.add(goodsList.get(i).getGoods());
+
 			}
 
 			goodsNameList = FXCollections.observableArrayList(saveGoodsName);
 
 			cbGoodsList.setItems(goodsNameList);
 
+			/********************
+			 * 2019 10 월 18일 cbGoodsList.setOnAction 이벤트 메소드 작성자 : 심재현
+			 * 
+			 * 기능 : comboBox의 값을 얻어서 해당 품목의 가격을 찾아 온다.
+			 */
 			cbGoodsList.setOnAction(e2 -> {
 
 				saveGoodsString = cbGoodsList.getSelectionModel().getSelectedItem();
@@ -145,8 +229,57 @@ public class MainController implements Initializable {
 					}
 
 				}
+
 			}); // end of cbGoodsList
 
+			/*********************
+			 * 2019 10 월 18일 작성자 : 심재현
+			 * 
+			 * 기능 : 테이블 뷰 컬럼 생성 후 컬럼과 값 세팅
+			 */
+			tableView.setEditable(true);
+
+			TableColumn columnDate = new TableColumn("날짜");
+			columnDate.setMaxWidth(110);
+			columnDate.setStyle("-fx-alignment: CENTER;");
+			columnDate.setCellValueFactory(new PropertyValueFactory("date"));
+
+			TableColumn columnGoods = new TableColumn("물품");
+			columnGoods.setMaxWidth(110);
+			columnGoods.setStyle("-fx-alignment: CENTER;");
+			columnGoods.setCellValueFactory(new PropertyValueFactory("goods"));
+
+			TableColumn columnPrice = new TableColumn("가격");
+			columnPrice.setMaxWidth(110);
+			columnPrice.setStyle("-fx-alignment: CENTER;");
+			columnPrice.setCellValueFactory(new PropertyValueFactory("price"));
+
+			TableColumn columnCount = new TableColumn("개수");
+			columnCount.setMaxWidth(110);
+			columnCount.setStyle("-fx-alignment: CENTER;");
+			columnCount.setCellValueFactory(new PropertyValueFactory("count"));
+
+			TableColumn columnTotal = new TableColumn("총액");
+			columnTotal.setMaxWidth(110);
+			columnTotal.setStyle("-fx-alignment: CENTER;");
+			columnTotal.setCellValueFactory(new PropertyValueFactory("total"));
+
+			TableColumn columnComents = new TableColumn("비고");
+			columnComents.setMaxWidth(110);
+			columnComents.setStyle("-fx-alignment: CENTER;");
+			columnComents.setCellValueFactory(new PropertyValueFactory("coments"));
+
+			tableView.setItems(saleVOList);
+
+			tableView.getColumns().addAll(columnDate, columnGoods, columnPrice, columnCount, columnTotal,
+					columnComents);
+
+			/*************************
+			 * 2019 10 월 18 일 작성자 : 심재현
+			 * 
+			 * 기능 : 비고 텍스트필드에서 키 이벤트 메소드를 걸어 놓
+			 * 
+			 */
 			tfSaleComents.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
 				@Override
@@ -172,55 +305,25 @@ public class MainController implements Initializable {
 
 							saleVOList.add(saveSaleVO);
 
-							tableView.setEditable(true);
-
-							TableColumn columnDate = new TableColumn("날짜");
-							columnDate.setMaxWidth(110);
-							columnDate.setStyle("-fx-alignment: CENTER;");
-							columnDate.setCellValueFactory(new PropertyValueFactory("date"));
-
-							TableColumn columnGoods = new TableColumn("물품");
-							columnGoods.setMaxWidth(110);
-							columnGoods.setStyle("-fx-alignment: CENTER;");
-							columnGoods.setCellValueFactory(new PropertyValueFactory("goods"));
-
-							TableColumn columnPrice = new TableColumn("가격");
-							columnPrice.setMaxWidth(110);
-							columnPrice.setStyle("-fx-alignment: CENTER;");
-							columnPrice.setCellValueFactory(new PropertyValueFactory("price"));
-
-							TableColumn columnCount = new TableColumn("개수");
-							columnCount.setMaxWidth(110);
-							columnCount.setStyle("-fx-alignment: CENTER;");
-							columnCount.setCellValueFactory(new PropertyValueFactory("count"));
-
-							TableColumn columnTotal = new TableColumn("총액");
-							columnTotal.setMaxWidth(110);
-							columnTotal.setStyle("-fx-alignment: CENTER;");
-							columnTotal.setCellValueFactory(new PropertyValueFactory("total"));
-
-							TableColumn columnComents = new TableColumn("비고");
-							columnComents.setMaxWidth(110);
-							columnComents.setStyle("-fx-alignment: CENTER;");
-							columnComents.setCellValueFactory(new PropertyValueFactory("coments"));
-
 							tableView.setItems(saleVOList);
-							tableView.getColumns().addAll(columnDate, columnGoods, columnPrice, columnCount,
-									columnTotal, columnComents);
 
 						}
 					}
 				}
 
-			}); // end of tfSaleCount
+			}); // end of tfSaleCount key Event
 
+			/*******************
+			 * 2019 10 월 18일 작성자 : 심재현
+			 * 
+			 * 기능 : 등록 버튼을 누르면 테이블에 써있는 값들을 데이터베이스에 등록한다.
+			 * 
+			 */
 			btSaleAdd.setOnAction(e2 -> {
 
 				try {
 
 					saleDAO = new SaleDAO();
-
-					System.out.println(saleVOList.toString());
 
 					for (int i = 0; i < saleVOList.size(); i++) {
 
@@ -229,21 +332,35 @@ public class MainController implements Initializable {
 					}
 
 					AlertMessage.alertWarningDisplay(1, "매출등록", "매출 등록 성공", "매출을 등록했습니다.");
+					saleVOList.removeAll(saleVOList);
+					tableView.setItems(selectSaleVOList);
 
 				} catch (Exception e3) {
 					AlertMessage.alertWarningDisplay(1, "매출등록", "매출 등록 실패", "매출 등록에 실패했습니다. 다시 시도해주세요.");
 					e3.printStackTrace();
 				}
 
-			});
+			}); // end of btSaleAdd
 
+			/***********************
+			 * 2019 10 월 18 일 작성자 : 심재현
+			 * 
+			 * 기능 : 테이블 뷰를 클릭한 곳의 값을 저장한다. (인덱스 값은 포함하지 않았다.)
+			 * 
+			 */
 			tableView.setOnMousePressed(e3 -> {
 
-				selectSaleVO = tableView.getSelectionModel().getSelectedItem();
+				selectSale = tableView.getSelectionModel().getSelectedItem();
 				selectSaleVOList = tableView.getSelectionModel().getSelectedItems();
 
 			}); // end of tableView select
 
+			/***********************
+			 * 2019 10 월 18 일 작성자 : 심재현
+			 * 
+			 * 기능 : 삭제 버튼을 누르면 항목이 삭제 된다. (테이블뷰에서 선택한 항목을 삭제함)
+			 * 
+			 */
 			btSaleDelete.setOnAction(e2 -> {
 
 				if (selectSaleVO.equals(null)) {
@@ -259,25 +376,15 @@ public class MainController implements Initializable {
 						AlertMessage.alertWarningDisplay(5, "삭제 주의", "삭제하시겠습니까?", "삭제하시겠습니까?");
 
 						if (AlertMessage.alert.getResult() == ButtonType.OK) {
-
-							int i = saleDAO.deleteSale(selectSaleVO);
-
-							if (i == 1) {
-
-								AlertMessage.alertWarningDisplay(1, "삭제 완료", "삭제 완료", "삭제 완료");
-
-							} else {
-
-								AlertMessage.alertWarningDisplay(1, "삭제 오류", "삭제 오류", "삭제 오류");
-
-							}
-
-						} else {
+							addSaleVOList.addAll(saleVOList);
+							saleVOList.remove(selectSale);
+							tableView.setItems(saleVOList);
 
 						}
 
 					} catch (Exception e3) {
 
+						AlertMessage.alertWarningDisplay(1, "오류", "오류입니다.", "다시 시도 해 주세요");
 						e3.printStackTrace();
 
 					}
@@ -285,11 +392,20 @@ public class MainController implements Initializable {
 				}
 
 			}); // end of btSaleDelete
-			
+
+			/********************
+			 * 2019 10 월 18일 작성자 : 심재현
+			 * 
+			 * 기능 : 버튼을 누르면 값을 초기화 하고 창을 닫는다.
+			 * 
+			 */
 			btSaleBack.setOnAction(e2 -> {
-				
+
+				addSaleVOList.addAll(saleVOList);// 있어야하는지 기억안남...
+				saleVOList.removeAll(saleVOList);
+
 				saleAddStage.close();
-				
+
 			});
 
 			Scene scene = new Scene(saleAddRoot);
@@ -299,19 +415,64 @@ public class MainController implements Initializable {
 		} catch (Exception e2) {
 
 			e2.printStackTrace();
+			AlertMessage.alertWarningDisplay(1, "오류", "오류입니다.", "다시 확인 해 주세요.");
 
 		} // end of handlerButtonSaleAddAction
 
 	} // end of handlerButtonSaleAddAction
 
-	private void handlerButtonSaleEditAction(ActionEvent e) {
-
-	} // end of handlerButtonSaleEditAction
-
+	/************************************
+	 * 기능 : 버튼을 누르면 항목을 지운다. 2019 10 월 18 일 작성자 : 심재현
+	 * 
+	 */
 	private void handlerButtonSaleDelete(ActionEvent e) {
+
+		try {
+
+			saleDAO = new SaleDAO();
+
+			AlertMessage.alertWarningDisplay(5, "삭제 주의", "삭제하시겠습니까?", "삭제하시겠습니까?");
+			// alert메세지의 버튼 값을 얻어와서 확인한다.
+			if (AlertMessage.alert.getResult() == ButtonType.OK) {
+
+				int i = saleDAO.deleteSale(selectSale);
+
+				if (i == 1) {
+
+					AlertMessage.alertWarningDisplay(1, "삭제 완료", "삭제 완료", "삭제 완료");
+
+					// 삭제후 날짜 값은 선택했던 값 그대로를 유지 해야 하므로 현재의 값을 얻어와 다시 테이블뷰를 세팅한다.
+					localDate = datePicker.getValue();
+					String localDateStr = localDate.getYear() + "-" + localDate.getMonthValue() + "-"
+							+ localDate.getDayOfMonth();
+
+					saleDAO = new SaleDAO();
+					searchDateSaleVO = saleDAO.getListToDate(localDateStr);
+					saleVOList.removeAll(saleVOList);
+					ObservableList<SaleVO> list2 = FXCollections.observableArrayList(searchDateSaleVO);
+					tableView.setItems(list2);
+
+				} else {
+
+					AlertMessage.alertWarningDisplay(1, "삭제 오류", "삭제 오류", "삭제 오류");
+
+				}
+
+			}
+
+		} catch (Exception e2) {
+
+			AlertMessage.alertWarningDisplay(1, "오류", "오류입니다.", "다시 확인 해 주세요.");
+			e2.printStackTrace();
+
+		}
 
 	} // end of handlerButtonSaleDelete
 
+	/***************************
+	 * 기능 : 버튼을 누르면 메뉴 확인 다이얼로그 창을 띄운다. 2019 10 월 18 일 작성자 : 심재현
+	 * 
+	 */
 	private void handlerButtonMenuCheck(ActionEvent e) {
 
 		try {
@@ -349,6 +510,12 @@ public class MainController implements Initializable {
 			tableView.setItems(goodsVOList);
 			tableView.getColumns().addAll(columnGoods, columnPrice);
 
+			/*******************
+			 * 2019 10 월 18 일 작성자 : 심재현
+			 * 
+			 * 기능 : 검색버튼
+			 * 
+			 */
 			btSearch.setOnAction(e1 -> {
 
 				ObservableList<GoodsVO> list = FXCollections.observableArrayList();
@@ -361,12 +528,19 @@ public class MainController implements Initializable {
 
 				} catch (Exception e2) {
 
+					AlertMessage.alertWarningDisplay(1, "오류", "오류 입니다.", "다시 시도 해 주세요.");
 					e2.printStackTrace();
 
 				}
 
 			}); // end of btSearch
 
+			/**********************
+			 * 2019 10 월 18 일 작성자 : 심재현
+			 * 
+			 * 기능 : 테이블뷰 새로 고침 버튼
+			 * 
+			 */
 			btMenuRefresh.setOnAction(e1 -> {
 
 				goodsVOList.removeAll(goodsVOList);
@@ -376,6 +550,12 @@ public class MainController implements Initializable {
 
 			});
 
+			/******************************
+			 * 2019 10 월 18 일 작성자 : 심재현
+			 * 
+			 * 기능 : 메뉴를 등록한다.
+			 * 
+			 */
 			btAdd.setOnAction(e1 -> {
 
 				try {
@@ -415,11 +595,20 @@ public class MainController implements Initializable {
 					dialMenuAddStage.show();
 
 				} catch (Exception e2) {
+
+					AlertMessage.alertWarningDisplay(1, "오류", "오류 입니다.", "다시 확인 해 주세요.");
 					e2.printStackTrace();
+
 				}
 
 			}); // end of btAdd
 
+			/**************************
+			 * 2019 10 월 18 일 작성자 : 심재현
+			 * 
+			 * 기능 : 테이블뷰 선택 시 정보를 저장한다.
+			 * 
+			 */
 			tableView.setOnMousePressed(e1 -> {
 
 				selectMenuEditGoodsVO = tableView.getSelectionModel().getSelectedItem();
@@ -427,6 +616,12 @@ public class MainController implements Initializable {
 
 			}); // end of tableView select
 
+			/************************************
+			 * 2019 10 월 18일 작성자 : 심재현
+			 * 
+			 * 기능 : 테이블 뷰에서 선택된 항목을 수정하는 창을 보여준다.
+			 * 
+			 */
 			btEdit.setOnAction(e1 -> {
 
 				try {
@@ -448,32 +643,52 @@ public class MainController implements Initializable {
 					tfEditGoods.setEditable(false);
 					tfEditPrice.setPromptText(String.valueOf(selectMenuEditGoodsVOList.get(0).getPrice()));
 
+					/********************************
+					 * 2019 10 월 18 일 작성자 : 심재현
+					 * 
+					 * 기능 : 수정한 내용을 업데이트 한다.
+					 * 
+					 */
 					btEditOk.setOnAction(e2 -> {
+						try {
+							goodsDVO = new GoodsDAO();
 
-						goodsDVO = new GoodsDAO();
+							if (tfEditGoods.getPromptText().equals(null)) {
 
-						if (tfEditGoods.getPromptText().equals(null)) {
+								goodsDVO.updateGoods(selectMenuEditGoodsVO, tfEditGoods.getText(),
+										Integer.parseInt(tfEditPrice.getText()));
 
-							goodsDVO.updateGoods(selectMenuEditGoodsVO, tfEditGoods.getText(),
-									Integer.parseInt(tfEditPrice.getText()));
+							} else {
 
-						} else {
+								goodsDVO.updateOnlyPrice(selectMenuEditGoodsVO,
+										Integer.parseInt(tfEditPrice.getText()));
 
-							goodsDVO.updateOnlyPrice(selectMenuEditGoodsVO, Integer.parseInt(tfEditPrice.getText()));
-
+							}
+						} catch (Exception e3) {
+							e3.printStackTrace();
+							AlertMessage.alertWarningDisplay(1, "오류", "수정 오류 입니다.", "다시 확인 해주세요.");
 						}
 
 					}); // end of btEditOk
 
+					/********************************************
+					 * 2019 10 월 18 일 작성자 : 심재현
+					 * 
+					 * 기능 : 수정 창을 닫는다.
+					 * 
+					 */
 					btEditBack.setOnAction(e2 -> {
+						try {
+							goodsVOList.removeAll(goodsVOList);
+							loadTotalGoodsDB();
 
-						goodsVOList.removeAll(goodsVOList);
-						loadTotalGoodsDB();
+							tableView.setItems(goodsVOList);
 
-						tableView.setItems(goodsVOList);
-
-						dialogEditStage.close();
-
+							dialogEditStage.close();
+						} catch (Exception e3) {
+							e3.printStackTrace();
+							AlertMessage.alertWarningDisplay(1, "오류", "뒤로가기 오류 입니다.", "다시 확인 해 주세요.");
+						}
 					}); // end of btEditBack
 
 					Scene scene = new Scene(menuEditRoot);
@@ -482,11 +697,20 @@ public class MainController implements Initializable {
 					dialogEditStage.show();
 
 				} catch (Exception e3) {
-					// TODO: handle exception
+
+					AlertMessage.alertWarningDisplay(1, "오류", "오류 입니다.", "다시 확인 해 주세요.");
+					e3.printStackTrace();
+
 				}
 
 			}); // end of btEdit
 
+			/***********************
+			 * 2019 10 월 18 일 작성자 : 심재현
+			 * 
+			 * 기능 : 테이블 뷰에서 선택 된 항목을 테이블 뷰에서 삭제한다.
+			 * 
+			 */
 			btEditDelete.setOnAction(e1 -> {
 
 				try {
@@ -506,22 +730,26 @@ public class MainController implements Initializable {
 
 						} else {
 
-							AlertMessage.alertWarningDisplay(1, "삭제 오류", "삭제 오류", "삭제 오류");
+							AlertMessage.alertWarningDisplay(1, "삭제 오류", "삭제 오류", "잘못 된 삭제입니다. 다시 확인 해 주세요.");
 
 						}
-
-					} else {
 
 					}
 
 				} catch (Exception e2) {
 
+					AlertMessage.alertWarningDisplay(1, "오류", "삭제 오류입니다.", "다시 확인 해 주세요.");
 					e2.printStackTrace();
 
 				}
 
 			}); // end of btEditDelete
-
+			/*****************
+			 * 2019 10 월 18 일 작성자 : 심재현
+			 * 
+			 * 기능 : 메뉴 확인 창을 닫는다.
+			 * 
+			 */
 			btBack.setOnAction(e1 -> {
 
 				dialogStage.close();
@@ -536,35 +764,15 @@ public class MainController implements Initializable {
 		} catch (IOException e1) {
 
 			e1.printStackTrace();
-
+			AlertMessage.alertWarningDisplay(1, "오류", "오류 입니다.", "다시 확인 해 주세요.");
 		}
 
 	} // end of handlerButtonMenuCheck
 
-	// end of handler method
-
-	private void loadTotalSaleDB() {
-
-		ArrayList<SaleVO> list = null;
-		SaleVO saleVO = null;
-		SaleDAO saleDVO = new SaleDAO();
-		list = saleDVO.getSaleTotal();
-
-		if (list == null) {
-
-			AlertMessage.alertWarningDisplay(1, "empty", "empty", "empty");
-			return;
-
-		}
-
-		for (int i = 0; i < list.size(); i++) {
-
-			saleVO = list.get(i);
-			saleVOList.add(saleVO);
-
-		}
-
-	} // end of loadTotalSaleDB
+	/************************************
+	 * 기능 : 데이터 베이스에 저장된 goodsVO 정보를 모두 불러온다. 2019 10 월 18 일 작성자 : 심재현
+	 * 
+	 */
 
 	private void loadTotalGoodsDB() {
 
@@ -589,6 +797,11 @@ public class MainController implements Initializable {
 		}
 
 	} // end of loadTotalGoodsDB
+
+	/************************
+	 * 기능 : 메인창의 테이블 뷰를 세팅한다. 2019 10 월 18 일 작성자 : 심재현
+	 * 
+	 */
 
 	private void tableViewSetting() {
 
@@ -624,7 +837,6 @@ public class MainController implements Initializable {
 		columnComents.setStyle("-fx-alignment: CENTER;");
 		columnComents.setCellValueFactory(new PropertyValueFactory("coments"));
 
-		tableView.setItems(saleVOList);
 		tableView.getColumns().addAll(columnDate, columnGoods, columnPrice, columnCount, columnTotal, columnComents);
 
 	} // end of tableViewSetting

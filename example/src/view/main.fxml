@@ -14,27 +14,22 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0">
                <children>
-                  <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="14.0" prefWidth="570.0">
+                  <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="14.0" prefHeight="27.0" spacing="43.0">
                      <children>
-                        <TextField fx:id="tfGoodsName" prefWidth="150.0" promptText="품목 이름" />
-                        <Button fx:id="btSearch" mnemonicParsing="false" text="검색">
+                        <DatePicker fx:id="datePicker" editable="false" prefHeight="27.0" prefWidth="187.0">
                            <HBox.margin>
-                              <Insets left="5.0" />
-                           </HBox.margin>
-                        </Button>
-                        <Button fx:id="btTotalSearch" mnemonicParsing="false" text="전체">
-                           <HBox.margin>
-                              <Insets left="5.0" />
-                           </HBox.margin>
-                        </Button>
-                        <DatePicker fx:id="datePicker" editable="false">
-                           <HBox.margin>
-                              <Insets left="5.0" />
+                              <Insets />
                            </HBox.margin>
                         </DatePicker>
+                        <TextField fx:id="tfGoodsName" prefHeight="27.0" prefWidth="159.0" promptText="품목 이름" />
+                        <Button fx:id="btSearch" mnemonicParsing="false" text="검색">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
                      </children>
                   </HBox>
-                  <BarChart fx:id="barChart" layoutX="520.0" layoutY="50.0" prefHeight="311.0" prefWidth="465.0" title="매출">
+                  <BarChart fx:id="barChart" layoutX="520.0" layoutY="5.0" prefHeight="356.0" prefWidth="465.0" title="매출">
                     <xAxis>
                       <CategoryAxis side="BOTTOM" />
                     </xAxis>
@@ -49,11 +44,6 @@
                         <Button fx:id="btSaleAdd" mnemonicParsing="false" text="매출 등록">
                            <font>
                               <Font name="Arial" size="17.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="btSaleEdit" mnemonicParsing="false" text="매출 수정">
-                           <font>
-                              <Font size="17.0" />
                            </font>
                         </Button>
                         <Button fx:id="btSaleDelete" mnemonicParsing="false" text="매출 삭제">

@@ -79,7 +79,7 @@ public class LoginController implements Initializable {
 				
 			} catch (Exception e1) {
 				e1.printStackTrace();
-				AlertMessage.alertWarningDisplay(1, "Main Load Error", "Falied load main window", "Sorry try again");
+				AlertMessage.alertWarningDisplay(1, "에러", "에러 입니다.", "메인 화면을 불러오는 도중 에러가 발생했습니다.");
 				
 				flagCheck = true;
 				
@@ -87,8 +87,7 @@ public class LoginController implements Initializable {
 
 		} else {
 
-			AlertMessage.alertWarningDisplay(1, "Id & Password Not Match", "wrong input Id & Password",
-					"Sorry try again");
+			AlertMessage.alertWarningDisplay(1, "오류", "오류 입니다.", "맞지 않는 아이디, 또는 비밀번호를 입력하였습니다.");
 			
 			flagCheck = true;
 
@@ -142,12 +141,12 @@ public class LoginController implements Initializable {
 								
 							clientDVO.insertClientDB(cvo);
 
-							AlertMessage.alertWarningDisplay(1, "sucess", "sucess", "sucess");
+							AlertMessage.alertWarningDisplay(1, "회원 가입 성공", "회원 가입 성공", "회원 가입에 성공하였습니다.");
 							dialogStage.close();
 
 						} else {
 
-							AlertMessage.alertWarningDisplay(1, "id duplicate", "id duplicate", "id duplicate");
+							AlertMessage.alertWarningDisplay(1, "아이디 중복", "아이디 중복 입니다.", "이미 사용중인 아이디 입니다.");
 							flagCheck = true;
 
 						}
@@ -155,8 +154,9 @@ public class LoginController implements Initializable {
 					}
 
 				} catch (Exception e2) {
-
-					AlertMessage.alertWarningDisplay(1, "Error", "ERROR", e2.toString());
+					
+					e2.printStackTrace();
+					AlertMessage.alertWarningDisplay(1, "오류", "오류 입니다.", "다시 확인 해 주세요.");
 					
 					flagCheck = true;
 
@@ -176,9 +176,10 @@ public class LoginController implements Initializable {
 			dialogStage.show();
 
 		} catch (Exception e1) {
-
+			
 			e1.printStackTrace();
-
+			AlertMessage.alertWarningDisplay(1, "에러", "에러 입니다.", "화면을 불러오는 도중 에러가 발생했습니다.");
+			
 		}
 
 	} // end of handlerButtonSignUpAction
