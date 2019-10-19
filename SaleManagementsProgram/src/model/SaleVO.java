@@ -9,6 +9,10 @@ public class SaleVO {
 	private int total;
 	private String coments;
 	
+	public SaleVO() {
+		
+	}
+
 	public SaleVO(String date, String goods, int price, int count, int total, String coments) {
 		super();
 		this.date = date;

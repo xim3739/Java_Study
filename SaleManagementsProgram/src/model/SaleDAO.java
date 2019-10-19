@@ -90,7 +90,7 @@ public class SaleDAO {
 		return list;
 	}
 
-	public int deleteSale(SaleVO saleVO) throws Exception {
+	public int deleteSale(SaleVO saleVO) {
 
 		String dml = "delete from saleTBL where date = ? and goods = ? and count = ?";
 		Connection con = null;

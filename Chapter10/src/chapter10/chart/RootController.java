@@ -23,6 +23,7 @@ public class RootController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
 		ObservableList<PieChart.Data> pieChartList = FXCollections.observableArrayList();
 		pieChartList.add(new PieChart.Data("AWT", 10));
 		pieChartList.add(new PieChart.Data("SWING", 20));

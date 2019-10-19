@@ -15,6 +15,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
@@ -25,7 +29,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -40,6 +43,8 @@ public class MainController implements Initializable {
 	@FXML
 	private TextField tfGoodsName;
 	@FXML
+	private TextField tfTotalSalePrice;
+	@FXML
 	private Button btSearch;
 	@FXML
 	private Button btSaleAdd;
@@ -48,10 +53,13 @@ public class MainController implements Initializable {
 	@FXML
 	private Button btMenuCheck;
 	@FXML
+	private Button btSaleTotalPrice;
+	@FXML
 	private DatePicker datePicker;
 	@FXML
 	private TableView<SaleVO> tableView;
-	// @FXML private BarChart<X, Y> barChart;
+	@FXML
+	private BarChart<String, Integer> barChart;
 
 	/********************
 	 * 기능 : 필요한 saleVO 모델의 변수 2019 10 월 18 일 작성자 : 심재현
@@ -60,12 +68,13 @@ public class MainController implements Initializable {
 	private ObservableList<SaleVO> saleVOList = FXCollections.observableArrayList();
 	private ObservableList<SaleVO> addSaleVOList = FXCollections.observableArrayList();
 	private ObservableList<SaleVO> selectSaleVOList = FXCollections.observableArrayList();
+	private ObservableList<SaleVO> dateSelectList = FXCollections.observableArrayList();
 	private int selectSaleIndex = 0;
 	private ArrayList<SaleVO> selectSaleVO = new ArrayList<SaleVO>();
 	private ArrayList<SaleVO> searchDateSaleVO = new ArrayList<SaleVO>();
 	private SaleVO selectSale = null;
 	private SaleDAO saleDAO = null;
-	private SaleVO saveSaleVO = null;;
+	private SaleVO saveSaleVO = new SaleVO();
 	private String saveGoodsString = null;
 
 	/*******************************
@@ -87,6 +96,7 @@ public class MainController implements Initializable {
 	private LocalDate localDate = null;
 	private int savePrice = 0;
 	private int saveTotalPrice = 0;
+	private String localDateStr = null;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -115,11 +125,15 @@ public class MainController implements Initializable {
 		btMenuCheck.setOnAction(e -> handlerButtonMenuCheck(e));
 
 		datePicker.setOnAction(e -> handlerDatePicker(e));
+		
+		btSaleTotalPrice.setOnAction(e -> handlerButtonSaleTotalPrice(e));
 
 	} // end of initialize
-
+	
 	private void handlerButtonSaleSearchAction(ActionEvent e) {
+		
 		try {
+			
 			String searchGoods = tfGoodsName.getText().trim();
 			localDate = datePicker.getValue();
 			String localDateStr = localDate.getYear() + "-" + localDate.getMonthValue() + "-"
@@ -142,22 +156,29 @@ public class MainController implements Initializable {
 	}
 
 	/*************************
+	 * 
 	 * 기능 : datePicker의 날짜를 선택하면 선택한 날짜의 SaleVO를 가져와서 테이블뷰에 표시한다. 2019 10 월 18 일
-	 * handlerDatePicker 메소드 작성자 : 심재현
+	 * 
+	 * 작성자 : 심재현
 	 * 
 	 */
 	private void handlerDatePicker(ActionEvent e) {
+
 		try {
+
 			localDate = datePicker.getValue();
-			String localDateStr = localDate.getYear() + "-" + localDate.getMonthValue() + "-"
-					+ localDate.getDayOfMonth();
+
+			localDateStr = localDate.getYear() + "-" + localDate.getMonthValue() + "-" + localDate.getDayOfMonth();
+
 			saleDAO = new SaleDAO();
 
 			searchDateSaleVO = saleDAO.getListToDate(localDateStr);
 
-			ObservableList<SaleVO> list = FXCollections.observableArrayList(searchDateSaleVO);
+			dateSelectList = FXCollections.observableArrayList(searchDateSaleVO);
 
-			tableView.setItems(list);
+			tableView.setItems(dateSelectList);
+
+			barChartSetting();
 
 		} catch (Exception e1) {
 
@@ -166,6 +187,43 @@ public class MainController implements Initializable {
 
 		}
 	} // end of handlerDatePicker
+
+	/************************
+	 * 
+	 * 기능 : 바 차트에 내용 표시 2019 10 월 19 일
+	 * 
+	 * 작성자 : 심재현
+	 * 
+	 */
+	private void barChartSetting() {
+
+		ObservableList<XYChart.Data<String, Integer>> barChartList = FXCollections.observableArrayList();
+		XYChart.Series<String, Integer> series = new XYChart.Series<>();
+
+		barChart.setTitle(localDateStr + "매출");
+
+		if (!(barChartList.equals(null))) {
+
+			barChartList.removeAll(barChartList);
+
+		}
+
+		for (int i = 0; i < dateSelectList.size(); i++) {
+
+			System.out.println(dateSelectList.get(i).getGoods());
+			barChartList.add(new XYChart.Data<String, Integer>(dateSelectList.get(i).getGoods(),
+					(Integer) (dateSelectList.get(i).getTotal())));
+
+		}
+
+		series.getData().clear();
+		barChart.getData().clear();
+
+		series.setName(localDateStr);
+		series.setData(barChartList);
+		barChart.getData().add(series);
+
+	} // end of barChartSetting
 
 	/**************************
 	 * 기능 : 등록 버튼을 누르면 등록 창을 연다. 2019 10월 18 일 handlerButtonSaleAddAction 메소드 작성자 :
@@ -268,7 +326,11 @@ public class MainController implements Initializable {
 			columnComents.setMaxWidth(110);
 			columnComents.setStyle("-fx-alignment: CENTER;");
 			columnComents.setCellValueFactory(new PropertyValueFactory("coments"));
-
+			if(!(saleVOList.equals(null))) {
+				
+				saleVOList.removeAll(saleVOList);
+				
+			}
 			tableView.setItems(saleVOList);
 
 			tableView.getColumns().addAll(columnDate, columnGoods, columnPrice, columnCount, columnTotal,
@@ -426,6 +488,21 @@ public class MainController implements Initializable {
 	 * 
 	 */
 	private void handlerButtonSaleDelete(ActionEvent e) {
+		
+		try {
+			
+			if(selectSale.equals(null)) {
+		
+			}
+
+		} catch (Exception e2) {
+			
+			AlertMessage.alertWarningDisplay(1, "삭제 오류", "삭제 오류입니다.", "항목을 선택하지 않았습니다.");
+			e2.printStackTrace();
+			return;
+			
+		}
+		
 
 		try {
 
@@ -451,6 +528,8 @@ public class MainController implements Initializable {
 					saleVOList.removeAll(saleVOList);
 					ObservableList<SaleVO> list2 = FXCollections.observableArrayList(searchDateSaleVO);
 					tableView.setItems(list2);
+					
+					barChartSetting();
 
 				} else {
 
@@ -769,6 +848,27 @@ public class MainController implements Initializable {
 
 	} // end of handlerButtonMenuCheck
 
+	/****************************
+	 * 기능 : 테이블 뷰의 표시된 금액을 전부 합해서 보여준다. 2019 10 월 19 
+	 * 
+	 * 작성자 : 심재현
+	 * 
+	 */
+	private void handlerButtonSaleTotalPrice(ActionEvent e) {
+		
+		int saleTotalPrice = 0;
+		
+		for(int i = 0; i < dateSelectList.size(); i++) {
+			
+			saleTotalPrice = dateSelectList.get(i).getTotal() + saleTotalPrice;
+			
+		}
+		
+		tfTotalSalePrice.setText(String.valueOf(saleTotalPrice));
+		
+	} // end of handlerButtonSaleTotalPrice
+
+	
 	/************************************
 	 * 기능 : 데이터 베이스에 저장된 goodsVO 정보를 모두 불러온다. 2019 10 월 18 일 작성자 : 심재현
 	 * 

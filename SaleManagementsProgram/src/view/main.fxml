@@ -29,17 +29,17 @@
                         </Button>
                      </children>
                   </HBox>
-                  <BarChart fx:id="barChart" layoutX="520.0" layoutY="5.0" prefHeight="356.0" prefWidth="465.0" title="매출">
+                  <BarChart fx:id="barChart" alternativeRowFillVisible="false" animated="false" layoutX="520.0" layoutY="5.0" prefHeight="356.0" prefWidth="465.0" title="매출">
                     <xAxis>
-                      <CategoryAxis side="BOTTOM" />
+                      <CategoryAxis side="BOTTOM" fx:id="xCatedory" />
                     </xAxis>
                     <yAxis>
-                      <NumberAxis side="LEFT" />
+                      <NumberAxis fx:id="yCategory" side="LEFT" />
                     </yAxis>
                   </BarChart>
                   <VBox alignment="CENTER" layoutX="76.0" layoutY="278.0" prefWidth="130.0" spacing="12.0" />
                   <VBox alignment="CENTER" layoutX="215.0" layoutY="281.0" prefWidth="130.0" spacing="12.0" />
-                  <HBox alignment="CENTER" layoutX="15.0" layoutY="271.0" prefHeight="80.0" prefWidth="480.0" spacing="30.0">
+                  <HBox alignment="CENTER" layoutX="15.0" layoutY="271.0" prefHeight="80.0" spacing="10.0">
                      <children>
                         <Button fx:id="btSaleAdd" mnemonicParsing="false" text="매출 등록">
                            <font>
@@ -59,6 +59,12 @@
                      </children>
                   </HBox>
                   <TableView fx:id="tableView" layoutX="15.0" layoutY="60.0" prefHeight="200.0" prefWidth="477.0" />
+                  <TextField fx:id="tfTotalSalePrice" alignment="CENTER" editable="false" layoutX="391.0" layoutY="294.0" prefHeight="33.0" prefWidth="101.0" promptText="총액" />
+                  <Button fx:id="btSaleTotalPrice" layoutX="333.0" layoutY="294.0" mnemonicParsing="false" text="총액">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
                </children></AnchorPane>
       </content>
     </Tab>
